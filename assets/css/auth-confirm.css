@@ -1,0 +1,64 @@
+
+/* Authentication Confirmation Dialog Styles */
+.auth-required-popup {
+    border: 2px solid rgba(255, 215, 0, 0.5) !important;
+    border-radius: 20px !important;
+    backdrop-filter: blur(15px) !important;
+}
+
+.btn-auth-confirm {
+    background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+    color: #0a0a0a !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 12px 25px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-auth-confirm:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4) !important;
+    background: linear-gradient(135deg, #FFA500, #FFD700) !important;
+}
+
+.btn-auth-cancel {
+    background: linear-gradient(135deg, #ff6b6b, #e55353) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 12px 25px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-auth-cancel:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4) !important;
+    background: linear-gradient(135deg, #e55353, #ff6b6b) !important;
+}
+
+/* Feature confirmation styles */
+.feature-confirm-popup {
+    border: 2px solid rgba(255, 215, 0, 0.3) !important;
+    border-radius: 15px !important;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .auth-required-popup,
+    .feature-confirm-popup {
+        width: 95% !important;
+        margin: 0 auto !important;
+    }
+    
+    .btn-auth-confirm,
+    .btn-auth-cancel {
+        padding: 10px 20px !important;
+        font-size: 0.9rem !important;
+    }
+}

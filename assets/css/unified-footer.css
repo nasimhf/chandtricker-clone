@@ -1,0 +1,312 @@
+:root {
+    --gold: #FFD700;
+    --primary-black: #0a0a0a;
+    --secondary-black: #1a1a1a;
+    --silver: #c0c0c0;
+}
+
+.unified-footer {
+    background: rgba(26, 26, 26, 0.98);
+    padding: 60px 0 25px;
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
+    margin-top: auto;
+}
+
+.unified-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.footer-section p {
+    color: var(--silver);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-logo .vip-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.4));
+}
+
+.footer-logo span {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--silver);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-section ul li a:hover {
+    color: var(--gold);
+    transform: translateX(5px);
+}
+
+.footer-section ul li a i {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--gold);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.social-link:hover {
+    background: var(--gold);
+    color: var(--primary-black);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    color: var(--silver);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* CTA Section - Login & Signup */
+.footer-cta-section {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 12px;
+    padding: 40px 30px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.footer-cta-section h3 {
+    color: var(--gold);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+}
+
+.footer-cta-section p {
+    color: var(--silver);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.footer-cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-cta-btn {
+    padding: 13px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    min-height: 48px;
+}
+
+.footer-cta-btn.login-cta {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+}
+
+.footer-cta-btn.login-cta:hover {
+    background: var(--gold);
+    color: var(--primary-black);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.footer-cta-btn.signup-cta {
+    background: var(--gold);
+    color: var(--primary-black);
+    font-weight: 700;
+}
+
+.footer-cta-btn.signup-cta:hover {
+    background: #FFE55C;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+}
+
+/* Tablet and Mobile Responsive */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .unified-footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-section h4 {
+        font-size: 1rem;
+    }
+
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+
+    .footer-cta-section {
+        padding: 25px 20px;
+        margin: 30px 0;
+    }
+
+    .footer-cta-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-cta-section p {
+        font-size: 0.9rem;
+    }
+
+    .footer-cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-cta-btn {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .unified-footer {
+        padding: 40px 0 15px;
+    }
+
+    .footer-content {
+        gap: 25px;
+    }
+
+    .footer-section h4 {
+        font-size: 0.95rem;
+    }
+
+    .footer-section p,
+    .footer-section ul li a {
+        font-size: 0.9rem;
+    }
+
+    .social-link {
+        width: 38px;
+        height: 38px;
+    }
+
+    .social-link i {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+
+    .footer-cta-section {
+        padding: 20px 15px;
+        margin: 25px 0;
+    }
+
+    .footer-cta-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .footer-cta-btn {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+}

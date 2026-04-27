@@ -1,0 +1,2501 @@
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                    <!-- SEO Meta Tags -->
+                    <title>Premium Tools - CHAND TRICKER | Best Free Online Tools</title>
+                    <meta name="description" content="Access CHAND TRICKER's premium suite of professional tools. Free Facebook tools, utilities, converters, generators and more. No download required.">
+                    <meta name="keywords" content="free tools, online tools, facebook tools, utility tools, converters, generators, calculators, instagram tools, social media tools, free utilities">
+                    <meta name="author" content="CHAND TRICKER">
+                    <meta name="robots" content="index, follow">
+                    <link rel="canonical" href="tools.html">
+
+                    <!-- Open Graph / Facebook -->
+                    <meta property="og:type" content="website">
+                    <meta property="og:url" content="https://chandtricker.com/tools">
+                    <meta property="og:title" content="Premium Tools - CHAND TRICKER | Best Free Online Tools">
+                    <meta property="og:description" content="Access CHAND TRICKER's premium suite of professional tools. Free Facebook tools, utilities, converters, generators and more.">
+                    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+
+                    <!-- Twitter -->
+                    <meta property="twitter:card" content="summary_large_image">
+                    <meta property="twitter:url" content="https://chandtricker.com/tools">
+                    <meta property="twitter:title" content="Premium Tools - CHAND TRICKER | Best Free Online Tools">
+                    <meta property="twitter:description" content="Access CHAND TRICKER's premium suite of professional tools. Free Facebook tools, utilities, converters, generators and more.">
+                    <meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+
+                    <!-- Schema.org Structured Data -->
+                    <script type="application/ld+json">
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "WebSite",
+                        "name": "CHAND TRICKER Tools",
+                        "url": "https://chandtricker.com/tools",
+                        "description": "Premium suite of professional online tools including Facebook tools, utilities, converters, and generators.",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "CHAND TRICKER"
+                        }
+                    }
+                    </script>
+
+                    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+                    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+                    <link rel="stylesheet" href="assets/css/unified-footer.css">
+                    <script src="assets/js/custom-alert.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+                    <style>
+                        :root {
+                            --primary: #0f0f0f;
+                            --secondary: #1a1a1a;
+                            --accent: #FFD700;
+                            --orange: #FFA500;
+                            --text: #ffffff;
+                            --text-muted: #cccccc;
+                            --card-bg: rgba(26, 26, 26, 0.9);
+                            --border: rgba(255, 215, 0, 0.2);
+                            --sidebar-width: 280px;
+                            --header-height: 70px;
+                            --gold: #FFD700;
+                            --silver: #C0C0C0;
+                            --gradient-gold: linear-gradient(135deg, #FFD700, #FFA500);
+                            --secondary-black: #0a0a0a; /* Added for footer background */
+                        }
+
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+                        }
+
+                        html {
+                            background-color: #0a0a0a;
+                        }
+
+                        body {
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            background: #0a0a0a;
+                            background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+                            background-attachment: fixed;
+                            color: var(--text);
+                            min-height: 100vh;
+                            padding-top: var(--header-height);
+                            -webkit-backface-visibility: hidden;
+                            backface-visibility: hidden;
+                        }
+
+                        /* Tool Categories Button */
+                        .categories-toggle {
+                            position: fixed;
+                            top: 120px;
+                            left: 20px;
+                            z-index: 999;
+                            background: var(--gradient-gold);
+                            color: #000;
+                            border: none;
+                            padding: 12px 24px;
+                            border-radius: 30px;
+                            cursor: pointer;
+                            font-weight: 700;
+                            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.35), inset 0 -2px 5px rgba(0, 0, 0, 0.1);
+                            font-size: 0.95rem;
+                            letter-spacing: 0.5px;
+                            backdrop-filter: blur(2px);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            white-space: nowrap;
+                            user-select: none;
+                        }
+
+                        .categories-toggle:hover {
+                            transform: translateY(-3px) scale(1.05);
+                            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3), inset 0 -2px 5px rgba(0, 0, 0, 0.1);
+                            background: linear-gradient(135deg, #FFED4A, #FFB500);
+                        }
+
+                        .categories-toggle:active {
+                            transform: translateY(-1px) scale(0.98);
+                            box-shadow: 0 3px 15px rgba(255, 215, 0, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+                        }
+
+                        .categories-toggle:focus {
+                            outline: 2px solid rgba(255, 215, 0, 0.6);
+                            outline-offset: 2px;
+                        }
+
+                        .categories-toggle i {
+                            font-size: 1.1rem;
+                            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        }
+
+                        .categories-toggle:hover i {
+                            transform: rotate(15deg) scale(1.1);
+                        }
+
+                        /* Tool Categories Sidebar */
+                        .tool-categories-sidebar {
+                            position: fixed;
+                            top: var(--header-height);
+                            left: -300px;
+                            width: 280px;
+                            height: calc(100vh - var(--header-height));
+                            background: linear-gradient(180deg, rgba(10, 10, 10, 0.98) 0%, rgba(15, 15, 15, 0.96) 100%);
+                            backdrop-filter: blur(25px);
+                            border-right: 2px solid rgba(255, 215, 0, 0.35);
+                            z-index: 998;
+                            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+                            padding: 20px;
+                            overflow-y: auto;
+                            box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+                        }
+
+                        .tool-categories-sidebar.active {
+                            left: 0;
+                            border-color: rgba(255, 215, 0, 0.5);
+                            box-shadow: 2px 0 25px rgba(255, 215, 0, 0.15);
+                        }
+
+                        .categories-header {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-bottom: 25px;
+                            padding-bottom: 15px;
+                            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+                        }
+
+                        .categories-title {
+                            color: var(--gold);
+                            font-family: 'Orbitron', sans-serif;
+                            font-weight: 700;
+                            font-size: 1.2rem;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
+                            letter-spacing: 0.5px;
+                        }
+
+                        .categories-title i {
+                            font-size: 1.35rem;
+                        }
+
+                        .categories-close {
+                            background: none;
+                            border: 1px solid transparent;
+                            color: var(--gold);
+                            font-size: 1.5rem;
+                            cursor: pointer;
+                            padding: 8px;
+                            border-radius: 50%;
+                            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                            width: 36px;
+                            height: 36px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .categories-close:hover {
+                            background: rgba(255, 215, 0, 0.15);
+                            border-color: rgba(255, 215, 0, 0.3);
+                            transform: rotate(90deg) scale(1.1);
+                            box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+                        }
+
+                        .categories-close:active {
+                            transform: rotate(90deg) scale(0.95);
+                        }
+
+                        .category-list {
+                            list-style: none;
+                        }
+
+                        .category-item {
+                            margin-bottom: 10px;
+                        }
+
+                        .category-link {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            color: var(--text-muted);
+                            text-decoration: none;
+                            padding: 12px 16px;
+                            border-radius: 12px;
+                            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                            background: rgba(26, 26, 26, 0.6);
+                            border: 1.5px solid rgba(255, 215, 0, 0.1);
+                            font-weight: 500;
+                        }
+
+                        .category-link:hover {
+                            background: rgba(255, 215, 0, 0.12);
+                            color: rgba(255, 215, 0, 0.95);
+                            border-color: rgba(255, 215, 0, 0.4);
+                            transform: translateX(6px);
+                            box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.08);
+                        }
+
+                        .category-link.active {
+                            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.08) 100%);
+                            color: var(--gold);
+                            border-color: rgba(255, 215, 0, 0.5);
+                            transform: translateX(6px);
+                            box-shadow: 0 0 12px rgba(255, 215, 0, 0.2), inset 0 0 10px rgba(255, 215, 0, 0.1);
+                        }
+
+                        .category-icon {
+                            width: 20px;
+                            text-align: center;
+                            font-size: 1rem;
+                            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        }
+
+                        .category-link:hover .category-icon {
+                            transform: scale(1.15);
+                        }
+
+                        .category-count {
+                            margin-left: auto;
+                            background: var(--gold);
+                            color: #000;
+                            padding: 2px 8px;
+                            border-radius: 12px;
+                            font-size: 0.8rem;
+                            font-weight: bold;
+                        }
+
+                        /* Content shift when sidebar is open */
+                        .main-content.categories-open {
+                            margin-left: 280px;
+                            transition: margin-left 0.3s ease;
+                        }
+
+                        /* Active Tools Section */
+                        .active-tools-section {
+                            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 165, 0, 0.05) 100%);
+                            border-bottom: 2px solid var(--border);
+                            padding: 30px 0;
+                            margin-top: var(--header-height);
+                        }
+
+                        .active-tools-header {
+                            text-align: center;
+                            margin-bottom: 25px;
+                        }
+
+                        .active-tools-header h2 {
+                            color: var(--gold);
+                            margin-bottom: 8px;
+                            font-size: 1.8rem;
+                            font-family: 'Orbitron', sans-serif;
+                            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+                        }
+
+                        .active-tools-header p {
+                            color: var(--text-muted);
+                            font-size: 1rem;
+                        }
+
+                        .active-tools-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                            gap: 20px;
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            padding: 0 20px;
+                        }
+
+                        .active-tool-card {
+                            background: var(--card-bg);
+                            border: 2px solid var(--gold);
+                            border-radius: 15px;
+                            padding: 20px;
+                            position: relative;
+                            overflow: hidden;
+                            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+                        }
+
+                        .active-tool-card:hover {
+                            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+                        }
+
+                        .active-tool-card::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            height: 4px;
+                            background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+                        }
+
+                        .active-tool-header {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-bottom: 15px;
+                        }
+
+                        .active-tool-info {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                        }
+
+                        .active-tool-icon {
+                            width: 40px;
+                            height: 40px;
+                            background: var(--gradient-gold);
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #000;
+                            font-size: 1.2rem;
+                        }
+
+                        .active-tool-name {
+                            color: var(--gold);
+                            font-weight: bold;
+                            font-size: 1.1rem;
+                        }
+
+                        .active-tool-status {
+                            background: #4CAF50;
+                            color: white;
+                            padding: 4px 12px;
+                            border-radius: 20px;
+                            font-size: 0.8rem;
+                            font-weight: bold;
+                        }
+
+                        .active-tool-countdown {
+                            text-align: center;
+                            margin: 15px 0;
+                        }
+
+                        .countdown-display {
+                            font-size: 1.5rem;
+                            color: var(--gold);
+                            font-weight: bold;
+                            font-family: 'Orbitron', sans-serif;
+                        }
+
+                        .countdown-label {
+                            color: var(--text-muted);
+                            font-size: 0.9rem;
+                            margin-bottom: 5px;
+                        }
+
+                        .active-tool-actions {
+                            display: flex;
+                            gap: 10px;
+                            margin-top: 15px;
+                        }
+
+                        .active-tool-btn {
+                            flex: 1;
+                            padding: 10px 15px;
+                            border: none;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            font-weight: bold;
+                            transition: all 0.3s ease;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 6px;
+                        }
+
+                        .btn-access {
+                            background: var(--gradient-gold);
+                            color: #000;
+                        }
+
+                        .btn-access:hover {
+                            transform: translateY(-2px);
+                            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+                        }
+
+                        .btn-extend {
+                            background: #4CAF50;
+                            color: white;
+                        }
+
+                        .btn-extend:hover {
+                            background: #45a049;
+                            transform: translateY(-2px);
+                        }
+
+                        .progress-bar {
+                            width: 100%;
+                            height: 6px;
+                            background: rgba(255, 255, 255, 0.1);
+                            border-radius: 3px;
+                            overflow: hidden;
+                            margin-top: 10px;
+                        }
+
+                        .progress-fill {
+                            height: 100%;
+                            background: linear-gradient(90deg, #4CAF50, #FFD700);
+                            border-radius: 3px;
+                            transition: width 1s linear;
+                        }
+
+                        /* Main Content */
+                        .main-content {
+                            margin-left: 0;
+                            min-height: 100vh;
+                        }
+
+                        /* Hero Section */
+                        .tools-header {
+                            text-align: center;
+                            padding: 60px 20px 40px;
+                            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+                        }
+
+                        .tools-hero h1 {
+                            font-size: 3rem;
+                            color: var(--gold);
+                            margin-bottom: 20px;
+                            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+                            font-family: 'Orbitron', sans-serif;
+                        }
+
+                        .tools-hero p {
+                            font-size: 1.2rem;
+                            color: var(--text-muted);
+                            margin-bottom: 30px;
+                        }
+
+                        .user-welcome {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 20px;
+                            margin: 30px auto;
+                            padding: 25px 30px;
+                            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 165, 0, 0.08));
+                            border: 2px solid var(--gold);
+                            border-radius: 20px;
+                            max-width: 700px;
+                            position: relative;
+                            overflow: hidden;
+                            box-shadow: 0 8px 32px rgba(255, 215, 0, 0.2);
+                        }
+
+                        .user-welcome::before {
+                            display: none;
+                        }
+
+
+
+                        .user-welcome span {
+                            font-size: 1.3rem;
+                            font-weight: 700;
+                            background: linear-gradient(135deg, #ffffff, var(--silver));
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                            position: relative;
+                            z-index: 2;
+                        }
+
+                        .user-welcome span #username {
+                            color: var(--gold);
+                            font-family: 'Orbitron', inherit;
+                            font-weight: 900;
+                            text-transform: uppercase;
+                            letter-spacing: 1px;
+                            background: linear-gradient(135deg, var(--gold), #ffed4a);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                        }
+
+                        .user-level {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            background: rgba(0, 0, 0, 0.3);
+                            border: 2px solid rgba(255, 215, 0, 0.6);
+                            border-radius: 25px;
+                            padding: 12px 18px;
+                            color: var(--gold);
+                            font-weight: 700;
+                            font-family: 'Orbitron', sans-serif;
+                            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+                            position: relative;
+                            z-index: 2;
+                            transition: all 0.3s ease;
+                        }
+
+                        .user-level:hover {
+                            background: rgba(255, 215, 0, 0.1);
+                            border-color: var(--gold);
+                            transform: translateY(-2px);
+                            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+                        }
+
+                        .user-level i {
+                            font-size: 1.2rem;
+                            filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+                        }
+
+                        .user-level span {
+                            font-size: 1.1rem;
+                            font-weight: 900;
+                            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+                        }
+
+                        .current-balance-display {
+                            max-width: 400px;
+                            margin: 20px auto;
+                        }
+
+                        .balance-card {
+                            background: rgba(26, 26, 26, 0.9);
+                            border: 2px solid var(--gold);
+                            border-radius: 15px;
+                            padding: 20px;
+                            text-align: center;
+                            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+                        }
+
+                        .account-status-row-card {
+                            background: rgba(26, 26, 26, 0.9);
+                            border: 2px solid var(--gold);
+                            border-radius: 15px;
+                            padding: 20px 25px;
+                            display: flex;
+                            align-items: stretch;
+                            gap: 25px;
+                            max-width: 650px;
+                            margin: 0 auto;
+                            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+                        }
+
+                        .status-row-item {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+                            flex: 1;
+                            justify-content: center;
+                            min-width: 0;
+                            word-break: break-word;
+                        }
+
+                        .status-badge-item {
+                            border-right: 1px solid rgba(255, 215, 0, 0.2);
+                            padding-right: 25px;
+                            flex: 1;
+                            min-width: 0;
+                        }
+
+                        .status-expiration-item {
+                            border-right: none;
+                            padding-left: 0;
+                            flex: 1.2;
+                            min-width: 0;
+                        }
+
+                        .status-label {
+                            color: var(--text-muted);
+                            font-size: 0.85rem;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+                        }
+
+                        @media (max-width: 600px) {
+                            .account-status-row-card {
+                                flex-direction: column;
+                                gap: 15px;
+                                padding: 20px;
+                                max-width: 100%;
+                            }
+
+                            .status-badge-item {
+                                border-right: none;
+                                border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+                                padding-right: 0;
+                                padding-bottom: 15px;
+                                flex: 1;
+                            }
+
+                            .status-expiration-item {
+                                border-right: none;
+                                padding-left: 0;
+                                padding-top: 10px;
+                                flex: 1;
+                            }
+                        }
+
+                        .balance-header {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            margin-bottom: 15px;
+                            color: var(--gold);
+                            font-weight: bold;
+                        }
+
+                        .balance-amount {
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            color: var(--gold);
+                        }
+
+                        /* Search Section */
+                        .search-section {
+                            padding: 20px;
+                            text-align: center;
+                        }
+
+                        .search-box {
+                            position: relative;
+                            max-width: 600px;
+                            margin: 0 auto;
+                        }
+
+                        .search-box i {
+                            position: absolute;
+                            left: 20px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            color: var(--gold);
+                        }
+
+                        .search-box input {
+                            width: 100%;
+                            padding: 15px 20px 15px 50px;
+                            background: var(--card-bg);
+                            border: 2px solid var(--border);
+                            border-radius: 25px;
+                            color: var(--text);
+                            font-size: 16px;
+                            outline: none;
+                            transition: all 0.3s ease;
+                        }
+
+                        .search-box input:focus {
+                            border-color: var(--gold);
+                            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+                        }
+
+                        /* Tools Grid */
+                        .tools-grid-section {
+                            padding: 20px;
+                        }
+
+                        .container {
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            padding: 0 20px;
+                        }
+
+                        .tools-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                            gap: 25px;
+                            margin-top: 30px;
+                        }
+
+                        .tool-card {
+                            background: var(--card-bg);
+                            border: 1px solid var(--border);
+                            border-radius: 15px;
+                            overflow: hidden;
+                            transition: all 0.3s ease;
+                            position: relative;
+                        }
+
+                        .tool-card:hover {
+                            transform: translateY(-5px);
+                            border-color: var(--gold);
+                            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
+                        }
+
+                        .tool-card::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            height: 3px;
+                            background: var(--gradient-gold);
+                        }
+
+                        .tool-image {
+                            position: relative;
+                            height: 200px;
+                            overflow: hidden;
+                        }
+
+                        .tool-image img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: transform 0.3s ease;
+                        }
+
+                        .tool-card:hover .tool-image img {
+                            transform: scale(1.05);
+                        }
+
+                        .tool-category-overlay {
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            background: var(--gradient-gold);
+                            color: #000;
+                            padding: 5px 12px;
+                            border-radius: 15px;
+                            font-size: 0.8rem;
+                            font-weight: bold;
+                        }
+
+                        .tool-content {
+                            padding: 25px;
+                        }
+
+                        .tool-category {
+                            background: var(--gold);
+                            color: var(--primary);
+                            padding: 4px 12px;
+                            border-radius: 12px;
+                            font-size: 12px;
+                            font-weight: bold;
+                            display: inline-block;
+                            margin-bottom: 8px;
+                        }
+
+                        .tool-name {
+                            font-size: 1.3rem;
+                            font-weight: bold;
+                            color: var(--text);
+                            margin-bottom: 10px;
+                        }
+
+                        .tool-description {
+                            color: var(--text-muted);
+                            line-height: 1.6;
+                            margin-bottom: 20px;
+                        }
+
+                        .tool-cost {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            font-weight: bold;
+                            color: var(--gold);
+                            margin-bottom: 15px;
+                        }
+
+                        .tool-btn {
+                            background: var(--gradient-gold);
+                            color: #000;
+                            border: none;
+                            padding: 12px 24px;
+                            border-radius: 25px;
+                            cursor: pointer;
+                            font-weight: bold;
+                            transition: all 0.3s ease;
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            width: 100%;
+                            justify-content: center;
+                        }
+
+                        .tool-btn:hover {
+                            transform: scale(1.05);
+                            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+                        }
+
+                        .tool-btn:disabled {
+                            opacity: 0.6;
+                            cursor: not-allowed;
+                            background: #666;
+                        }
+
+                        /* Modals */
+                        .modal {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.8);
+                            z-index: 1000;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .modal-content {
+                            background: var(--card-bg);
+                            border: 2px solid var(--gold);
+                            border-radius: 15px;
+                            max-width: 500px;
+                            width: 90%;
+                            max-height: 90vh;
+                            overflow-y: auto;
+                        }
+
+                        .modal-header {
+                            padding: 20px;
+                            border-bottom: 1px solid var(--border);
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+                        }
+
+                        .modal-header h3 {
+                            color: var(--gold);
+                            margin: 0;
+                        }
+
+                        .modal-body {
+                            padding: 20px;
+                            color: var(--text);
+                        }
+
+                        .modal-footer {
+                            padding: 20px;
+                            border-top: 1px solid var(--border);
+                            display: flex;
+                            gap: 10px;
+                            justify-content: flex-end;
+                        }
+
+                        .btn {
+                            padding: 10px 20px;
+                            border: none;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            font-weight: bold;
+                            transition: all 0.3s ease;
+                            text-decoration: none;
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 8px;
+                        }
+
+                        .btn-primary {
+                            background: var(--gradient-gold);
+                            color: #000;
+                        }
+
+                        .btn-secondary {
+                            background: #666;
+                            color: var(--text);
+                        }
+
+                        .btn:hover {
+                            transform: translateY(-2px);
+                            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                        }
+
+                        /* Tool Info Sections in Modal */
+                        .tool-info-section,
+                        .cost-breakdown-section,
+                        .balance-overview-section {
+                            background: rgba(0, 0, 0, 0.3);
+                            border: 1px solid var(--border);
+                            border-radius: 10px;
+                            padding: 15px;
+                            margin-bottom: 15px;
+                        }
+
+                        .tool-info-header {
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+                            margin-bottom: 10px;
+                        }
+
+                        .tool-category-icon {
+                            width: 40px;
+                            height: 40px;
+                            background: var(--gradient-gold);
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #000;
+                        }
+
+                        .tool-details h4 {
+                            color: var(--gold);
+                            margin-bottom: 5px;
+                        }
+
+                        .cost-breakdown-header,
+                        .balance-overview-header {
+                            color: var(--gold);
+                            margin-bottom: 15px;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+
+                        .cost-grid,
+                        .balance-grid {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 15px;
+                        }
+
+                        .cost-item,
+                        .balance-item {
+                            text-align: center;
+                        }
+
+                        .cost-label,
+                        .balance-label {
+                            color: var(--text-muted);
+                            font-size: 0.9rem;
+                            margin-bottom: 5px;
+                        }
+
+                        .cost-value,
+                        .balance-value {
+                            font-weight: bold;
+                            font-size: 1.1rem;
+                        }
+
+                        /* Loading placeholder */
+                        .loading-placeholder {
+                            text-align: center;
+                            padding: 60px 20px;
+                            color: var(--silver);
+                        }
+
+                        .loading-placeholder i {
+                            font-size: 2rem;
+                            margin-bottom: 20px;
+                            color: var(--gold);
+                            animation: spin 1s linear infinite;
+                        }
+
+                        @keyframes spin {
+                            0% { transform: rotate(0deg); }
+                            100% { transform: rotate(360deg); }
+                        }
+
+                        /* Footer Styles */
+                        .footer {
+                            background: var(--secondary-black);
+                            border-top: 1px solid rgba(255, 215, 0, 0.3);
+                            padding: 50px 0 20px;
+                            margin-top: 80px;
+                        }
+
+                        .footer-content {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                            gap: 40px;
+                            margin-bottom: 30px;
+                        }
+
+                        .footer-logo {
+                            font-family: 'Orbitron', sans-serif;
+                            font-size: 1.5rem;
+                            font-weight: 700;
+                            color: var(--gold);
+                            margin-bottom: 15px;
+                        }
+
+                        .footer-section h4 {
+                            color: var(--gold);
+                            font-family: 'Orbitron', sans-serif;
+                            margin-bottom: 15px;
+                        }
+
+                        .footer-section ul {
+                            list-style: none;
+                        }
+
+                        .footer-section ul li {
+                            margin-bottom: 8px;
+                        }
+
+                        .footer-section ul li a {
+                            color: var(--silver);
+                            text-decoration: none;
+                            transition: color 0.3s ease;
+                        }
+
+                        .footer-section ul li a:hover {
+                            color: var(--gold);
+                        }
+
+                        .footer-section p {
+                            color: var(--silver);
+                            line-height: 1.6;
+                        }
+
+                        .footer-bottom {
+                            border-top: 1px solid rgba(255, 215, 0, 0.2);
+                            padding-top: 20px;
+                            text-align: center;
+                            color: var(--silver);
+                        }
+
+                        .social-links {
+                            display: flex;
+                            gap: 15px;
+                        }
+
+                        .social-link {
+                            width: 40px;
+                            height: 40px;
+                            background: var(--secondary-black);
+                            border: 1px solid var(--gold);
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: var(--gold);
+                            transition: all 0.3s ease;
+                            text-decoration: none;
+                        }
+
+                        .social-link:hover {
+                            color: var(--gold);
+                            transform: translateY(-2px);
+                            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+                        }
+
+                        /* Mobile responsive footer */
+                        @media (max-width: 768px) {
+                            .footer {
+                                padding: 40px 0 15px;
+                                margin-top: 60px;
+                            }
+
+                            .footer-content {
+                                grid-template-columns: 1fr;
+                                gap: 25px;
+                                text-align: center;
+                            }
+
+                            .social-links {
+                                justify-content: center;
+                            }
+
+                            .footer-section {
+                                text-align: center;
+                            }
+                        }
+
+                        /* Mobile Responsive for User Welcome */
+                        @media (max-width: 768px) {
+                            .user-welcome {
+                                flex-direction: column;
+                                text-align: center;
+                                gap: 15px;
+                                margin: 20px 15px;
+                                padding: 20px;
+                                max-width: none;
+                            }
+
+                            .user-welcome span {
+                                font-size: 1.1rem;
+                            }
+
+                            .user-level {
+                                padding: 10px 15px;
+                                font-size: 0.95rem;
+                                justify-content: center;
+                            }
+
+                            .user-level i {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        @media (max-width: 480px) {
+                            .user-welcome {
+                                gap: 12px;
+                                padding: 18px 15px;
+                                margin: 15px 10px;
+                                border-radius: 15px;
+                            }
+
+                            .user-welcome span {
+                                font-size: 1rem;
+                                line-height: 1.3;
+                            }
+
+                            .user-level {
+                                padding: 8px 12px;
+                                font-size: 0.9rem;
+                                border-radius: 20px;
+                            }
+
+                            .user-level span {
+                                font-size: 1rem;
+                            }
+                        }
+
+                        /* Mobile Responsive */
+                        @media (max-width: 768px) {
+                            .categories-toggle {
+                                top: 80px;
+                                left: 10px;
+                                padding: 10px 16px;
+                                font-size: 0.85rem;
+                                border-radius: 25px;
+                            }
+
+                            .categories-toggle span {
+                                display: none;
+                            }
+
+                            .categories-toggle:hover {
+                                transform: translateY(-2px) scale(1.08);
+                            }
+
+                            .tool-categories-sidebar {
+                                width: 100%;
+                                left: -100%;
+                            }
+
+                            .main-content.categories-open {
+                                margin-left: 0;
+                            }
+
+                            .active-tools-grid {
+                                grid-template-columns: 1fr;
+                                gap: 15px;
+                            }
+
+                            .active-tools-header h2 {
+                                font-size: 1.5rem;
+                            }
+
+                            .active-tool-card {
+                                padding: 15px;
+                            }
+
+                            .active-tool-actions {
+                                flex-direction: column;
+                            }
+
+                            .countdown-display {
+                                font-size: 1.3rem;
+                            }
+
+                            .tools-sidebar {
+                                width: 280px;
+                                left: -280px;
+                            }
+
+                            .tools-hamburger {
+                                top: 70px;
+                                left: 10px;
+                                padding: 10px 12px;
+                            }
+
+                            .tools-hamburger span {
+                                display: none;
+                            }
+
+                            .tools-hero h1 {
+                                font-size: 2rem;
+                            }
+
+                            .tools-grid {
+                                grid-template-columns: 1fr;
+                                gap: 20px;
+                            }
+
+                            .main-content.sidebar-open {
+                                margin-left: 0;
+                            }
+
+                            .cost-grid,
+                            .balance-grid {
+                                grid-template-columns: 1fr;
+                                gap: 10px;
+                            }
+
+                            .modal-footer {
+                                flex-direction: column;
+                                gap: 10px;
+                            }
+                        }
+
+                        @media (min-width: 1200px) {
+                            .main-content {
+                                margin-left: 0;
+                                transition: margin-left 0.3s ease;
+                            }
+
+                            .main-content.sidebar-open {
+                                margin-left: var(--sidebar-width);
+                            }
+
+                            .tools-sidebar {
+                                left: -var(--sidebar-width);
+                            }
+
+                            .tools-sidebar.active {
+                                left: 0;
+                            }
+
+                            .tools-hamburger {
+                                display: flex;
+                            }
+                        }
+                    </style>
+                    <link rel="stylesheet" href="assets/css/unified-header.css">
+                    <script src="assets/js/unified-navigation.js" defer></script>
+                    <link rel="stylesheet" href="assets/css/scroll-to-top.css">
+                </head>
+                <body>
+                    <!-- Unified Navigation Navbar -->
+                    <nav class="navbar">
+                        <div class="nav-container">
+                            <div class="nav-brand">
+                                <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                                    <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon">
+                                    <span>CHAND TRICKER</span>
+                                </a>
+                            </div>
+                            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="nav-links" id="navLinks">
+                                <!-- Public Navigation Items -->
+                                <a href="index.html" class="nav-link-public"><i class="fas fa-home"></i> Home</a>
+                                <a href="tools.html" class="nav-link-public"><i class="fas fa-tools"></i> Tools</a>
+                                <a href="services.html" class="nav-link-public"><i class="fas fa-gem"></i> Services</a>
+                                <a href="about.html" class="nav-link-public"><i class="fas fa-info-circle"></i> About</a>
+                                <a href="contact.html" class="nav-link-public"><i class="fas fa-envelope"></i> Contact</a>
+
+                                <!-- Authentication Links -->
+                                <a href="logout.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                                <a href="signup.html" class="signup-btn"><i class="fas fa-user-plus"></i> Sign Up</a>
+
+                                <!-- Premium/User Features (Hidden until logged in) -->
+                                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                                <a href="profile.html" class="auth-only-link profile-btn" style="display: none;"><i class="fas fa-user-circle"></i> Profile</a>
+                                <a href="quick-access.html" class="auth-only-link quick-access-btn" style="display: none;"><i class="fas fa-bolt"></i> Quick Access</a>
+
+                                <!-- Tools & Services -->
+                              <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                                <a href="file-services.html" class="auth-only-link" style="display: none;"><i class="fab fa-servicestack"></i> File Services</a>
+                              <a href="download-files.html" class="auth-only-link" style="display: none;"><i class="fas fa-download"></i> Files Download</a>
+                              <a href="download-apk.html" class="auth-only-link" style="display: none;"><i class="fas fa-mobile-alt"></i> APK Download</a>
+
+                                <!-- Account Management -->
+                                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                                <a href="payment.html" class="auth-only-link payment-btn" style="display: none;"><i class="fas fa-wallet"></i> Payment</a>
+                                <a href="withdrawal.html" class="auth-only-link withdrawal-btn" style="display: none;"><i class="fas fa-money-bill-wave"></i> Withdrawal</a>
+                                <a href="referral.html" class="auth-only-link referral-btn" style="display: none;"><i class="fas fa-user-plus"></i> Referral</a>
+
+                                <!-- Tools & Support -->
+                                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                                <a href="user-search.html" class="auth-only-link user-search-btn" style="display: none;"><i class="fas fa-search"></i> User Search</a>
+                                <a href="support-tickets.html" class="auth-only-link support-btn" style="display: none;"><i class="fas fa-ticket-alt"></i> Support Tickets</a>
+                                <a href="blog.html" class="auth-only-link blog-btn" style="display: none;"><i class="fas fa-blog"></i> Blog</a>
+                              <a href="video.html" class="auth-only-link" style="display: none;"><i class="fab fa-youtube-square"></i> Tricks Video</a>
+
+                                <!-- Logout (Last Item) -->
+                                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                                <a href="logout.html" class="logout-btn logout-link auth-only-link" style="display: none;" onclick="directLogout(); return false;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- Navigation -->
+
+
+
+                    <!-- Tool Categories Toggle Button -->
+                    <button class="categories-toggle" id="categoriesToggle" onclick="toggleCategories()">
+                        <i class="fas fa-th-list"></i>
+                        <span>Tool Categories</span>
+                    </button>
+
+                    <!-- Tool Categories Sidebar -->
+                    <div class="tool-categories-sidebar" id="categoriesSidebar">
+                        <div class="categories-header">
+                            <h3 class="categories-title">
+                                <i class="fas fa-th-list"></i>
+                                Tool Categories
+                            </h3>
+                            <button class="categories-close" onclick="toggleCategories()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <ul class="category-list" id="categoryList">
+                            <li class="category-item">
+                                <a href="tools.html#" class="category-link active" onclick="filterByCategory('all')">
+                                    <i class="fas fa-th category-icon"></i>
+                                    <span>All Tools</span>
+                                    <span class="category-count" id="allToolsCount">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Main Content -->
+                    <main class="main-content" id="mainContent">
+
+                        <!-- Tools Header -->
+                        <section class="tools-header">
+                            <div class="tools-hero">
+                                <h1>CHAND TRICKER Tool Collection</h1>
+                                <p>Access our premium suite of professional tools designed for elite users</p>
+
+                                <div class="user-welcome" id="userWelcome" style="display: none;">
+                                    <span>Welcome back, <span id="username"></span>!</span>
+                                    <div class="user-level" id="welcomeLevel" style="display: none;">
+                                        <i class="fas fa-trophy"></i>
+                                        <span>Level <span id="userLevel">1</span></span>
+                                    </div>
+                                </div>
+
+                                <div class="current-balance-display" id="currentBalanceDisplay" style="display: none;">
+                                    <div class="balance-card" style="margin: 0 auto; text-align: center;">
+                                        <div class="balance-header" style="justify-content: center;">
+                                            <i class="fas fa-wallet"></i>
+                                            <span>Current Balance</span>
+                                        </div>
+                                        <div class="balance-amount" id="currentBalanceAmount" style="justify-content: center;">
+                                            <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
+                                                <div style="display: flex; align-items: center; gap: 8px;">
+                                                    <i class="fas fa-coins"></i>
+                                                    <span id="balanceValue">0</span> Coins
+                                                </div>
+                                                <div style="color: #4CAF50; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;" id="pkrBalanceDisplay">
+                                                    <i class="fas fa-money-bill-wave"></i>
+                                                    PKR Balance: <span id="pkrBalanceValue">0</span> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Account Status Row Card -->
+                                <div class="account-status-display" id="accountStatusDisplay" style="display: none; margin-top: 20px;">
+                                    <div class="account-status-row-card">
+                                        <div class="status-row-item status-badge-item">
+                                            <div class="status-label">Account Status</div>
+                                            <div id="accountStatusMain" style="padding: 8px 20px; border-radius: 20px; font-weight: bold; font-size: 1rem; display: flex; align-items: center; gap: 8px;">
+                                                <span id="statusIcon"></span>
+                                                <span id="statusText">Free</span>
+                                            </div>
+                                        </div>
+                                        <div id="premiumExpirationCardRow" class="status-row-item status-expiration-item" style="display: none; flex: 1.2;">
+                                            <div class="status-label"><i class="fas fa-hourglass-end"></i> Premium Expires</div>
+                                            <div style="display: flex; flex-direction: column; gap: 5px; width: 100%; min-width: 0;">
+                                                <div style="color: #FFA500; font-size: 1.1rem; font-weight: bold; line-height: 1.2; word-break: break-word;" id="daysRemainingMain">30 days</div>
+                                                <div style="color: #FFD700; font-size: 0.8rem; word-break: break-word; line-height: 1.3;" id="expirationDateMain">Expires: Mar 13, 2026</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Search Section -->
+                        <section class="search-section">
+                            <div class="search-box">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="toolSearch" placeholder="Search tools..." onkeyup="searchTools()">
+                            </div>
+                        </section>
+
+                        <!-- Tools Grid -->
+                        <section class="tools-grid-section">
+                            <div class="container">
+                                <div class="tools-grid" id="toolsGrid">
+                                    <div class="loading-placeholder" style="grid-column: 1 / -1;">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                        <p>Loading premium tools...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+
+                    <!-- Login Required Modal -->
+                    <div id="loginModal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <i class="fas fa-lock"></i>
+                                <h3>Login Required</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>Please log in to access this premium tool.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                                <a href="logout.html" class="btn btn-primary">Login</a>
+                                <a href="signup.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool Confirmation Modal -->
+                    <div id="toolConfirmModal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div id="toolIcon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h3 id="toolConfirmTitle">Activate Premium Tool</h3>
+                            </div>
+                            <div class="modal-body">
+                                <div class="tool-info-section">
+                                    <div class="tool-info-header">
+                                        <div class="tool-category-icon" id="toolCategoryIcon">
+                                            <i class="fas fa-cog"></i>
+                                        </div>
+                                        <div class="tool-details">
+                                            <h4 id="confirmToolName">Tool Name</h4>
+                                            <p id="confirmToolDescription">Tool description will appear here</p>
+                                        </div>
+                                    </div>
+                                    <div class="tool-category-display">
+                                        <div style="color: var(--gold); font-weight: 600; margin-bottom: 8px;">
+                                            <i class="fas fa-tag"></i> Category: <span id="confirmToolCategory" style="color: var(--silver);">Utility</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cost-breakdown-section">
+                                    <h4 class="cost-breakdown-header">
+                                        <i class="fas fa-coins"></i>
+                                        Cost Breakdown
+                                    </h4>
+                                    <div class="cost-grid">
+                                        <div class="cost-item">
+                                            <div class="cost-label">Tool Cost</div>
+                                            <div class="cost-value" style="color: #ff6b6b;">
+                                                <i class="fas fa-coins"></i> <span id="confirmToolCost">100</span>
+                                            </div>
+                                        </div>
+                                        <div class="cost-item">
+                                            <div class="cost-label">Access Duration</div>
+                                            <div class="cost-value" style="color: var(--gold);" id="confirmToolDuration">
+                                                <i class="fas fa-clock"></i> 30 Minutes
+                                            </div>
+                                        </div>
+                                        <div class="cost-item">
+                                            <div class="cost-label">Total Activations</div>
+                                            <div class="cost-value" style="color: #2ecc71;" id="confirmTotalActivations">
+                                                <i class="fas fa-chart-bar"></i> 0
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="balance-overview-section">
+                                    <h4 class="balance-overview-header">
+                                        <i class="fas fa-wallet"></i>
+                                        Balance Overview
+                                    </h4>
+                                    <div class="balance-grid">
+                                        <div class="balance-item">
+                                            <div class="balance-label">Current Balance</div>
+                                            <div class="balance-value" style="color: #2ecc71;" id="confirmCurrentBalance">
+                                                <i class="fas fa-coins"></i> 1000 Coins
+                                            </div>
+                                        </div>
+                                        <div class="balance-item">
+                                            <div class="balance-label" id="confirmDeductionLabel">Deduction</div>
+                                            <div class="cost-value" style="color: #ff6b6b;" id="confirmDeductionAmount">
+                                                -<span id="confirmDeduction">100</span> Coins
+                                            </div>
+                                        </div>
+                                        <div class="balance-item">
+                                            <div class="balance-label" id="confirmRemainingLabel">After Purchase</div>
+                                            <div class="balance-value" style="color: var(--gold);" id="confirmRemainingBalance">
+                                                <i class="fas fa-coins"></i> 900 Coins
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" onclick="closeToolConfirmModal()">
+                                    <i class="fas fa-times"></i> Cancel
+                                </button>
+                                <button class="btn btn-primary" onclick="confirmToolPurchase()">
+                                    <i class="fas fa-check"></i> Activate Tool
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="unified-footer">
+                        <div class="container">
+                            <div class="footer-content">
+                                <!-- Logo & Description -->
+                                <div class="footer-section">
+                                    <div class="footer-logo">
+                                        <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon" style="width: 32px; height: 32px; border-radius: 50%;">
+                                            <span>CHAND TRICKER</span>
+                                        </a>
+                                    </div>
+                                    <p>Your trusted platform for premium digital solutions, tools, and services. Join thousands of users worldwide.</p>
+                                </div>
+
+                                <!-- Quick Links -->
+                                <div class="footer-section">
+                                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                                    <ul>
+                                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                                        <li><a href="tools.html"><i class="fas fa-chevron-right"></i> Tools</a></li>
+                                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                                        <li><a href="download-files.html"><i class="fas fa-chevron-right"></i> Download Files</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Policies -->
+                                <div class="footer-section">
+                                    <h4><i class="fas fa-file-alt"></i> Policies</h4>
+                                    <ul>
+                                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                                        <li><a href="refund-policy.html"><i class="fas fa-chevron-right"></i> Refund Policy</a></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Contact Us -->
+                                <div class="footer-section">
+                                    <h4><i class="fas fa-address-book"></i> Contact Us</h4>
+                                    <div class="social-links">
+                                        <a href="https://wa.me/message/63ORB7U3LWOWD1" class="social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://whatsapp.com/channel/0029VaZrEGYIN9ih4PxcFQ33" class="social-link" title="WhatsApp Channel"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://www.youtube.com/@chandtricker/" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                                        <a href="https://youtube.com/@chandtricker2.0" class="social-link" title="YouTube 2.0"><i class="fab fa-youtube"></i></a>
+                                        <a href="https://www.facebook.com/CH4ND.TRICKER" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/chand.tricker/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://t.me/CHANDTRICKER" class="social-link" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                                        <a href="https://github.com/chandtricker" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer-bottom">
+                                <p>&copy; 2025 - <span id="copyright-year">2026</span> CHAND TRICKER. All rights reserved. | Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i> CHAND TRICKER & ATF TEAM</p>
+                            </div>
+                        </div>
+                    </footer>
+
+                    <script>
+                        // Auto-update copyright year
+                        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+                    </script>
+                    <script>
+                        // Counter animation function
+                        function animateCounter(elementId, start, end, duration) {
+                            const target = document.getElementById(elementId);
+                            if (!target) return;
+
+                            let startTime = null;
+
+                            function updateCounter(currentTime) {
+                                if (!startTime) startTime = currentTime;
+                                const progress = (currentTime - startTime) / duration;
+                                if (progress < 1) {
+                                    const currentValue = Math.floor(start + (end - start) * progress);
+                                    target.textContent = formatNumber(currentValue);
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    target.textContent = formatNumber(end);
+                                }
+                            }
+                            requestAnimationFrame(updateCounter);
+                        }
+
+                        let allTools = [];
+                        let currentUser = null;
+                        let pendingToolPurchase = null;
+                        let activeToolsData = [];
+                        let activeToolsInterval = null;
+                        let currentCategory = 'all';
+                        let categoriesSidebarOpen = false;
+                        const isMobile = window.innerWidth <= 768;
+
+                        // Global error handler for Chrome extension errors
+                        window.addEventListener('error', function(event) {
+                            if (event.message && event.message.includes('runtime.lastError')) {
+                                event.preventDefault();
+                                return false;
+                            }
+                        });
+
+                        // Handle unhandled promise rejections from Chrome extensions
+                        window.addEventListener('unhandledrejection', function(event) {
+                            if (event.reason && event.reason.message && event.reason.message.includes('runtime.lastError')) {
+                                event.preventDefault();
+                                return false;
+                            }
+                        });
+
+                        // Initialize page
+                        document.addEventListener('DOMContentLoaded', function() {
+                            checkAuth();
+                            loadTools();
+                            loadActiveTools();
+                        });
+
+                        // Number formatting function
+                        function formatNumber(number) {
+                            // Handle undefined, null, or invalid numbers
+                            if (number === undefined || number === null || isNaN(number)) {
+                                return '0';
+                            }
+
+                            // Ensure number is actually a number
+                            const num = Number(number);
+
+                            if (num >= 1000000000) {
+                                return (num / 1000000000).toFixed(num % 1000000000 === 0 ? 0 : 1) + 'B';
+                            } else if (num >= 1000000) {
+                                return (num / 1000000).toFixed(num % 1000000 === 0 ? 0 : 1) + 'M';
+                            } else if (num >= 1000) {
+                                return (num / 1000).toFixed(num % 1000 === 0 ? 0 : 1) + 'K';
+                            }
+                            return num.toString();
+                        }
+
+                        // Check authentication
+                        async function checkAuth() {
+                            const token = localStorage.getItem('token');
+
+                            if (token) {
+                                try {
+                                    const response = await fetch('/api/user', {
+                                        headers: {
+                                            'Authorization': `Bearer ${token}`
+                                        }
+                                    });
+
+                                    if (response.ok) {
+                                        const data = await response.json();
+                                        currentUser = data.user;
+                                        updateNavigation(true);
+                                        showUserWelcome();
+                                        loadPKRBalance();
+                                    } else {
+                                        localStorage.removeItem('token');
+                                        currentUser = null;
+                                        updateNavigation(false);
+                                    }
+                                } catch (error) {
+                                    console.error('Error checking auth:', error);
+                                    currentUser = null;
+                                    updateNavigation(false);
+                                }
+                            } else {
+                                updateNavigation(false);
+                            }
+                        }
+
+                        function updateNavigation(isLoggedIn) {
+                            const defaultNav = document.getElementById('defaultNav');
+                            const loggedInNav = document.getElementById('loggedInNav');
+
+                            if (isLoggedIn) {
+                                if (defaultNav) defaultNav.style.display = 'none';
+                                if (loggedInNav) loggedInNav.style.display = 'flex';
+                            } else {
+                                if (defaultNav) defaultNav.style.display = 'flex';
+                                if (loggedInNav) loggedInNav.style.display = 'none';
+                            }
+                        }
+
+                        function showUserWelcome() {
+                            if (!currentUser) return;
+
+                            const userWelcome = document.getElementById('userWelcome');
+                            const usernameElement = document.getElementById('username');
+                            const welcomeLevel = document.getElementById('welcomeLevel');
+                            const userLevelElement = document.getElementById('userLevel');
+                            const currentBalanceDisplay = document.getElementById('currentBalanceDisplay');
+                            const balanceValue = document.getElementById('balanceValue');
+
+                            // Ensure level and coins exist, default values
+                            const coins = currentUser.coins !== undefined ? currentUser.coins : 0;
+                            const level = currentUser.level !== undefined ? currentUser.level : 1;
+
+                            if (userWelcome) userWelcome.style.display = 'flex';
+                            if (usernameElement) usernameElement.textContent = currentUser.username || 'User';
+                            if (welcomeLevel) welcomeLevel.style.display = 'flex';
+                            if (userLevelElement) userLevelElement.textContent = level;
+                            if (currentBalanceDisplay) currentBalanceDisplay.style.display = 'flex';
+                            if (balanceValue) balanceValue.textContent = formatNumber(coins);
+
+                            // Update account status card
+                            const accountStatusDisplay = document.getElementById('accountStatusDisplay');
+                            const statusIcon = document.getElementById('statusIcon');
+                            const statusText = document.getElementById('statusText');
+                            const premiumExpirationCard = document.getElementById('premiumExpirationCardRow');
+                            const statusMain = document.getElementById('accountStatusMain');
+                            const daysRemainingMain = document.getElementById('daysRemainingMain');
+                            const expirationDateMain = document.getElementById('expirationDateMain');
+
+                            console.log('User data:', currentUser);
+                            console.log('isPremium:', currentUser.isPremium);
+                            console.log('premiumExpiresAt:', currentUser.premiumExpiresAt);
+
+                            if (accountStatusDisplay) {
+                                const isPremiumExpired = currentUser.premiumExpiresAt && new Date(currentUser.premiumExpiresAt) < new Date();
+                                const isActivePremium = currentUser.isPremium && !isPremiumExpired;
+
+                                console.log('=== Account Status Check ===');
+                                console.log('isPremium:', currentUser.isPremium);
+                                console.log('premiumExpiresAt:', currentUser.premiumExpiresAt);
+                                console.log('isPremiumExpired:', isPremiumExpired);
+                                console.log('isActivePremium:', isActivePremium);
+                                accountStatusDisplay.style.display = 'block';
+
+                                if (isActivePremium) {
+                                    // Premium Status
+                                    if (statusIcon) statusIcon.textContent = '👑';
+                                    if (statusText) statusText.textContent = 'Premium';
+                                    if (statusMain) {
+                                        statusMain.style.background = 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)';
+                                        statusMain.style.color = '#000';
+                                    }
+
+                                    // Calculate remaining days - ALWAYS show expiration section for premium users
+                                    if (premiumExpirationCard && currentUser.premiumExpiresAt) {
+                                        try {
+                                            const expiresAt = new Date(currentUser.premiumExpiresAt);
+                                            const now = new Date();
+                                            const timeLeft = expiresAt - now;
+                                            const daysLeft = Math.ceil(timeLeft / (1000 * 60 * 60 * 24));
+
+                                            console.log('✅ Premium user detected');
+                                            console.log('✅ Expiration date:', expiresAt.toString());
+                                            console.log('✅ Days left:', daysLeft);
+
+                                            // Show the expiration card
+                                            premiumExpirationCard.style.display = 'flex';
+                                            premiumExpirationCard.style.flex = '1.2';
+
+                                            // Update days remaining with better formatting
+                                            if (daysRemainingMain) {
+                                                let daysText;
+                                                if (daysLeft > 0) {
+                                                    daysText = `${daysLeft} day${daysLeft !== 1 ? 's' : ''} left`;
+                                                } else if (daysLeft === 0) {
+                                                    daysText = 'Expires today';
+                                                } else {
+                                                    daysText = 'Expired';
+                                                }
+                                                daysRemainingMain.textContent = daysText;
+                                                daysRemainingMain.style.color = daysLeft > 7 ? '#FFA500' : daysLeft > 0 ? '#FF6B6B' : '#FF4444';
+                                                console.log('✅ Days remaining text updated:', daysText);
+                                            }
+
+                                            // Update expiration date
+                                            if (expirationDateMain) {
+                                                const formattedDate = expiresAt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                                                const dateText = `Expires: ${formattedDate}`;
+                                                expirationDateMain.textContent = dateText;
+                                                console.log('✅ Expiration date text updated:', dateText);
+                                            }
+                                        } catch (error) {
+                                            console.error('❌ Error updating premium expiry display:', error);
+                                            // Fallback - still show the card even if there's an error
+                                            if (premiumExpirationCard) premiumExpirationCard.style.display = 'flex';
+                                        }
+                                    } else {
+                                        console.log('⚠️ Premium info not available. isPremium:', currentUser.isPremium, 'premiumExpiresAt:', currentUser.premiumExpiresAt);
+                                    }
+                                } else {
+                                    // Free Status
+                                    if (statusIcon) statusIcon.textContent = '📋';
+                                    if (statusText) statusText.textContent = 'Free';
+                                    if (statusMain) {
+                                        statusMain.style.background = 'rgba(255, 255, 255, 0.1)';
+                                        statusMain.style.color = '#fff';
+                                    }
+
+                                    if (premiumExpirationCard) {
+                                        premiumExpirationCard.style.display = 'none';
+                                    }
+                                }
+                            }
+                        }
+
+                        // Toggle categories sidebar
+                        function toggleCategories() {
+                            const sidebar = document.getElementById('categoriesSidebar');
+                            const mainContent = document.getElementById('mainContent');
+                            const toggleBtn = document.getElementById('categoriesToggle');
+
+                            categoriesSidebarOpen = !categoriesSidebarOpen;
+
+                            if (categoriesSidebarOpen) {
+                                sidebar.classList.add('active');
+                                if (!isMobile) {
+                                    mainContent.classList.add('categories-open');
+                                }
+                                toggleBtn.innerHTML = '<i class="fas fa-times"></i><span>Close Categories</span>';
+                            } else {
+                                sidebar.classList.remove('active');
+                                mainContent.classList.remove('categories-open');
+                                toggleBtn.innerHTML = '<i class="fas fa-th-list"></i><span>Tool Categories</span>';
+                            }
+                        }
+
+                        // Filter tools by category
+                        function filterByCategory(category) {
+                            currentCategory = category;
+
+                            // Update active category link
+                            document.querySelectorAll('.category-link').forEach(link => {
+                                link.classList.remove('active');
+                            });
+                            event.target.closest('.category-link').classList.add('active');
+
+                            // Filter and display tools
+                            let filteredTools = allTools;
+                            if (category !== 'all') {
+                                filteredTools = allTools.filter(tool => tool.category === category);
+                            }
+
+                            displayTools(filteredTools);
+
+                            // Close sidebar on mobile after selection
+                            if (isMobile) {
+                                toggleCategories();
+                            }
+                        }
+
+                        // Build categories list
+                        function buildCategoriesList() {
+                            const categoryList = document.getElementById('categoryList');
+                            const allToolsCount = document.getElementById('allToolsCount');
+
+                            // Count tools by category
+                            const categoryCount = {};
+                            allTools.forEach(tool => {
+                                const category = tool.category || 'Uncategorized';
+                                categoryCount[category] = (categoryCount[category] || 0) + 1;
+                            });
+
+                            // Update all tools count
+                            allToolsCount.textContent = allTools.length;
+
+                            // Get category icons
+                            const categoryIcons = {
+                                'Facebook': 'fab fa-facebook',
+                                'Security': 'fas fa-shield-alt',
+                                'Media': 'fas fa-photo-video',
+                                'Social Media': 'fas fa-share-alt',
+                                'Tutorial': 'fas fa-graduation-cap',
+                                'General': 'fas fa-cog',
+                                'Utility': 'fas fa-tools',
+                                'Uncategorized': 'fas fa-question-circle'
+                            };
+
+                            // Add category items
+                            Object.keys(categoryCount).sort().forEach(category => {
+                                const categoryItem = document.createElement('li');
+                                categoryItem.className = 'category-item';
+
+                                const icon = categoryIcons[category] || 'fas fa-folder';
+
+                                categoryItem.innerHTML = `
+                                    <a href="tools.html#" class="category-link" onclick="filterByCategory('${category}')">
+                                        <i class="${icon} category-icon"></i>
+                                        <span>${category}</span>
+                                        <span class="category-count">${categoryCount[category]}</span>
+                                    </a>
+                                `;
+
+                                categoryList.appendChild(categoryItem);
+                            });
+                        }
+
+                        // Load tools
+                        async function loadTools() {
+                            try {
+                                const response = await fetch('/api/tools');
+                                const data = await response.json();
+                                allTools = data;
+                                displayTools(allTools);
+                                buildCategoriesList();
+                            } catch (error) {
+                                console.error('Error loading tools:', error);
+                                const toolsGrid = document.getElementById('toolsGrid');
+                                toolsGrid.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; color: var(--silver); padding: 60px 20px;"><i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 20px; color: #ff6b6b;"></i><br><h3 style="color: #ff6b6b; margin-bottom: 10px;">Failed to Load Tools</h3><p>Please refresh the page to try again.</p></div>';
+                            }
+                        }
+
+                        // Display tools
+                        function displayTools(tools) {
+                            const toolsGrid = document.getElementById('toolsGrid');
+                            toolsGrid.innerHTML = '';
+
+                            if (tools.length === 0) {
+                                toolsGrid.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; color: var(--silver); padding: 60px 20px;"><i class="fas fa-search" style="font-size: 3rem; margin-bottom: 20px; color: var(--gold);"></i><br><h3 style="color: var(--gold); margin-bottom: 10px;">No Tools Found</h3><p>Try adjusting your search or category filter.</p></div>';
+                                return;
+                            }
+
+                            tools.forEach(tool => {
+                                const toolCard = document.createElement('div');
+                                toolCard.className = 'tool-card';
+
+                                toolCard.innerHTML = `
+                                    <div class="tool-image">
+                                        <img src="https://chandtricker.com/${tool.image}" alt="${tool.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250/FFD700/000000?text=${encodeURIComponent(tool.name)}'">
+                                        <div class="tool-category-overlay">${tool.category}</div>
+                                    </div>
+                                    <div class="tool-content">
+                                        <div class="tool-category">${tool.category}</div>
+                                        <h3 class="tool-name">${tool.name}</h3>
+                                        <p class="tool-description">${tool.description}</p>
+                                        <div class="tool-cost">
+                                            ${tool.costType === 'pkr' ? 
+                                                `<i class="fas fa-money-bill-wave"></i> PKR ${tool.cost}` : 
+                                                `<i class="fas fa-coins"></i> ${formatNumber(tool.cost)} Coins`
+                                            }
+                                        </div>
+                                        <button class="btn btn-primary tool-btn" onclick="accessTool('${tool.id}')">
+                                            <i class="fas fa-arrow-right"></i>
+                                            <span>Access Tool</span>
+                                        </button>
+                                    </div>
+                                `;
+                                toolsGrid.appendChild(toolCard);
+                            });
+                        }
+
+                        // Search tools
+                        let searchTimeout;
+                        function searchTools() {
+                            clearTimeout(searchTimeout);
+                            searchTimeout = setTimeout(() => {
+                                const searchInput = document.getElementById('toolSearch');
+                                const searchTerm = searchInput.value.toLowerCase();
+
+                                let filteredTools = allTools;
+
+                                // Apply category filter first
+                                if (currentCategory !== 'all') {
+                                    filteredTools = filteredTools.filter(tool => tool.category === currentCategory);
+                                }
+
+                                // Then apply search filter
+                                if (searchTerm.trim() !== '') {
+                                    filteredTools = filteredTools.filter(tool => 
+                                        tool.name.toLowerCase().includes(searchTerm) || 
+                                        tool.description.toLowerCase().includes(searchTerm) ||
+                                        tool.category.toLowerCase().includes(searchTerm)
+                                    );
+                                }
+
+                                displayTools(filteredTools);
+                            }, 300);
+                        }
+
+                        // Access tool
+                        async function accessTool(toolId) {
+                            if (!currentUser) {
+                                document.getElementById('loginModal').style.display = 'flex';
+                                return;
+                            }
+
+                            const tool = allTools.find(t => t.id === toolId);
+                            if (!tool) return;
+
+                            // Check if tool has external URL
+                            if (tool.toolUrl && (tool.toolUrl.startsWith('http://') || tool.toolUrl.startsWith('https://'))) {
+                                window.open(tool.toolUrl, '_blank');
+                                return;
+                            }
+
+                            // Refresh user data to ensure we have latest balance
+                            await checkAuth();
+
+                            // Check if user is premium and not expired
+                            const isPremiumExpired = currentUser.premiumExpiresAt && new Date(currentUser.premiumExpiresAt) < new Date();
+                            const isActivePremium = currentUser.isPremium && !isPremiumExpired;
+
+                            // Check if user has enough coins/balance (skip if premium)
+                            if (!isActivePremium && tool.costType === 'pkr') {
+                                const userPkrBalance = currentUser.pkrBalance || 0;
+                                if (userPkrBalance < tool.cost) {
+                                    Swal.fire({
+                                        title: 'Insufficient PKR Balance',
+                                        html: `
+                                            <p>You need <strong>PKR ${tool.cost}</strong> but only have <strong>PKR ${userPkrBalance}</strong></p>
+                                            <p>Please add funds to your PKR balance to access this tool.</p>
+                                        `,
+                                        icon: 'error',
+                                        confirmButtonText: 'Add Funds',
+                                        showCancelButton: true,
+                                        cancelButtonText: 'Cancel',
+                                        confirmButtonColor: '#FFD700',
+                                        background: 'rgba(26, 26, 26, 0.95)',
+                                        color: '#ffffff'
+                                    }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            window.location.href = `/payment?tool=${toolId}&amount=${tool.cost}&name=${encodeURIComponent(tool.name)}`;
+                                        }
+                                    });
+                                    return;
+                                }
+                            } else if (!isActivePremium) {
+                                const userCoins = currentUser.coins || 0;
+                                if (userCoins < tool.cost) {
+                                    Swal.fire({
+                                        title: 'Insufficient Coins',
+                                        html: `
+                                            <p>You need <strong>${formatNumber(tool.cost)} coins</strong> but only have <strong>${formatNumber(userCoins)} coins</strong></p>
+                                            <p>Please earn more coins to access this tool.</p>
+                                        `,
+                                        icon: 'error',
+                                        confirmButtonColor: '#FFD700',
+                                        background: 'rgba(26, 26, 26, 0.95)',
+                                        color: '#ffffff'
+                                    });
+                                    return;
+                                }
+                            }
+
+                            // Store tool for confirmation
+                            pendingToolPurchase = { toolId, tool };
+
+                            // Populate confirmation modal
+                            document.getElementById('confirmToolName').textContent = tool.name;
+                            document.getElementById('confirmToolDescription').textContent = tool.description;
+                            document.getElementById('confirmToolCategory').textContent = tool.category;
+
+                            if (isActivePremium) {
+                                document.getElementById('confirmToolCost').textContent = 'FREE (Premium Member)';
+                            } else {
+                                document.getElementById('confirmToolCost').textContent = tool.costType === 'pkr' ? `PKR ${tool.cost}` : `${tool.cost} Coins`;
+                            }
+
+                            // Update balance display
+                            if (isActivePremium) {
+                                // Premium user - no deduction
+                                if (tool.costType === 'pkr') {
+                                    const userPkrBalance = currentUser.pkrBalance || 0;
+                                    document.getElementById('confirmCurrentBalance').innerHTML = `<i class="fas fa-money-bill-wave"></i> PKR ${userPkrBalance}`;
+                                    document.getElementById('confirmDeductionAmount').innerHTML = `<i class="fas fa-star"></i> <strong style="color: #FFD700;">No charge (Premium)</strong>`;
+                                    document.getElementById('confirmRemainingBalance').innerHTML = `<i class="fas fa-money-bill-wave"></i> PKR ${userPkrBalance}`;
+                                } else {
+                                    document.getElementById('confirmCurrentBalance').innerHTML = `<i class="fas fa-coins"></i> ${formatNumber(currentUser.coins)} Coins`;
+                                    document.getElementById('confirmDeductionAmount').innerHTML = `<i class="fas fa-star"></i> <strong style="color: #FFD700;">No charge (Premium)</strong>`;
+                                    document.getElementById('confirmRemainingBalance').innerHTML = `<i class="fas fa-coins"></i> ${formatNumber(currentUser.coins)} Coins`;
+                                }
+                            } else {
+                                // Regular user - deduct coins/pkr
+                                if (tool.costType === 'pkr') {
+                                    const userPkrBalance = currentUser.pkrBalance || 0;
+                                    document.getElementById('confirmCurrentBalance').innerHTML = `<i class="fas fa-money-bill-wave"></i> PKR ${userPkrBalance}`;
+                                    document.getElementById('confirmDeductionAmount').innerHTML = `<i class="fas fa-money-bill-wave"></i> -PKR ${tool.cost}`;
+                                    document.getElementById('confirmRemainingBalance').innerHTML = `<i class="fas fa-money-bill-wave"></i> PKR ${userPkrBalance - tool.cost}`;
+                                } else {
+                                    document.getElementById('confirmCurrentBalance').innerHTML = `<i class="fas fa-coins"></i> ${formatNumber(currentUser.coins)} Coins`;
+                                    document.getElementById('confirmDeductionAmount').innerHTML = `<i class="fas fa-coins"></i> -${tool.cost} Coins`;
+                                    document.getElementById('confirmRemainingBalance').innerHTML = `<i class="fas fa-coins"></i> ${formatNumber(currentUser.coins - tool.cost)} Coins`;
+                                }
+                            }
+
+                            // Update access duration
+                            const accessDuration = tool.accessDurationMinutes || 30;
+                            document.getElementById('confirmToolDuration').innerHTML = `<i class="fas fa-clock"></i> ${accessDuration} Minutes`;
+
+                            document.getElementById('confirmTotalActivations').innerHTML = `<i class="fas fa-chart-bar"></i> ${formatNumber(tool.totalActivations || 0)}`;
+
+                            // Show confirmation modal
+                            document.getElementById('toolConfirmModal').style.display = 'flex';
+                        }
+
+                        // Confirm tool purchase
+                        async function confirmToolPurchase() {
+                            if (!pendingToolPurchase) return;
+
+                            const { toolId, tool } = pendingToolPurchase;
+
+                            try {
+                                const token = localStorage.getItem('token');
+                                let endpoint, requestBody;
+
+                                if (tool.costType === 'pkr') {
+                                    endpoint = '/api/use-tool-pkr-balance';
+                                    requestBody = { toolId };
+                                } else {
+                                    endpoint = '/api/user/use-tool';
+                                    requestBody = { toolId };
+                                }
+
+                                const response = await fetch(endpoint, {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                        'Authorization': `Bearer ${token}`
+                                    },
+                                    body: JSON.stringify(requestBody)
+                                });
+
+                                const data = await response.json();
+
+                                if (data.success) {
+                                    closeToolConfirmModal();
+
+                                    // Update balance based on cost type
+                                    if (tool.costType === 'pkr') {
+                                        if (currentUser) {
+                                            currentUser.pkrBalance = data.remainingBalance || 0;
+                                        }
+                                        const pkrBalanceValue = document.getElementById('pkrBalanceValue');
+                                        if (pkrBalanceValue) {
+                                            pkrBalanceValue.textContent = formatNumber(data.remainingBalance || 0);
+                                        }
+                                    } else {
+                                        // Update coin balance
+                                        if (currentUser) {
+                                            currentUser.coins = data.coins !== undefined ? data.coins : 0;
+                                            updateCoinDisplay();
+                                        }
+                                    }
+
+                                    // Show success message
+                                    await Swal.fire({
+                                        title: 'Tool Activated!',
+                                        html: `
+                                            <p><strong>${tool.name}</strong> has been activated!</p>
+                                            <p style="color: #ff6b6b;">${tool.costType === 'pkr' ? 'PKR' : 'Coins'} ${data.deducted || tool.cost} deducted</p>
+                                            <p style="color: #2ecc71;">Remaining ${tool.costType === 'pkr' ? 'PKR' : 'Coins'}: ${tool.costType === 'pkr' ? (data.remainingBalance || 0) : formatNumber(data.coins || 0)}</p>
+                                        `,
+                                        icon: 'success',
+                                        timer: 3000,
+                                        showConfirmButton: false,
+                                        background: 'rgba(26, 26, 26, 0.95)',
+                                        color: '#ffffff'
+                                    });
+
+                                    // Open tool in new tab
+                                    if (data.toolUrl) {
+                                        window.open(data.toolUrl, '_blank');
+                                    }
+
+                                    // Reload user data to ensure accuracy
+                                    setTimeout(() => {
+                                        checkAuth();
+                                        loadActiveTools();
+                                    }, 1000);
+
+                                } else {
+                                    closeToolConfirmModal();
+
+                                    let errorMessage = data.error || 'Failed to activate tool';
+                                    if (data.required && data.current !== undefined) {
+                                        errorMessage = `Insufficient ${tool.costType === 'pkr' ? 'PKR' : 'coins'}. Required: ${data.required}, Current: ${data.current}`;
+                                    }
+
+                                    Swal.fire({
+                                        title: 'Error',
+                                        text: errorMessage,
+                                        icon: 'error',
+                                        confirmButtonColor: '#FFD700',
+                                        background: 'rgba(26, 26, 26, 0.95)',
+                                        color: '#ffffff'
+                                    });
+                                }
+                            } catch (error) {
+                                console.error('Error using tool:', error);
+                                closeToolConfirmModal();
+                                Swal.fire({
+                                    title: 'Error',
+                                    text: 'Failed to activate tool. Please try again.',
+                                    icon: 'error',
+                                    confirmButtonColor: '#FFD700',
+                                    background: 'rgba(26, 26, 26, 0.95)',
+                                    color: '#ffffff'
+                                });
+                            }
+                        }
+
+                        function updateCoinDisplay() {
+                            const overviewCoins = document.getElementById('overviewCoins');
+                            const balanceValue = document.getElementById('balanceValue');
+
+                            // Ensure currentUser and coins exist, default to 0
+                            const coins = currentUser && currentUser.coins !== undefined ? currentUser.coins : 0;
+
+                            if (overviewCoins) overviewCoins.textContent = formatNumber(coins);
+                            if (balanceValue) balanceValue.textContent = formatNumber(coins);
+                        }
+
+                        // Modal functions
+                        function closeModal() {
+                            document.getElementById('loginModal').style.display = 'none';
+                        }
+
+                        function closeToolConfirmModal() {
+                            document.getElementById('toolConfirmModal').style.display = 'none';
+                            pendingToolPurchase = null;
+                        }
+
+                        // Load PKR Balance
+                        async function loadPKRBalance() {
+                            if (!currentUser) return;
+
+                            try {
+                                const token = localStorage.getItem('token');
+                                const response = await fetch('/api/user', {
+                                    headers: { 'Authorization': `Bearer ${token}` }
+                                });
+
+                                if (response.ok) {
+                                    const data = await response.json();
+                                    const pkrBalanceValue = document.getElementById('pkrBalanceValue');
+                                    if (pkrBalanceValue && data.user) {
+                                        const pkrBalance = data.user.pkrBalance || 0;
+                                        pkrBalanceValue.textContent = formatNumber(pkrBalance);
+                                        currentUser.pkrBalance = pkrBalance;
+                                    }
+                                }
+                            } catch (error) {
+                                console.error('Error loading PKR balance:', error);
+                            }
+                        }
+
+                        // Active tools functions
+                        // Load and manage active tools
+                        async function loadActiveTools() {
+                            if (!currentUser) {
+                                hideActiveTools();
+                                return;
+                            }
+
+                            try {
+                                const token = localStorage.getItem('token');
+                                const response = await fetch('/api/user/active-sessions', {
+                                    headers: { 'Authorization': `Bearer ${token}` }
+                                });
+
+                                if (response.ok) {
+                                    const data = await response.json();
+                                    activeToolsData = data.activeSessions || [];
+
+                                    // Filter out expired tools (but keep tools without expiration)
+                                    const now = Date.now();
+                                    activeToolsData = activeToolsData.filter(tool => {
+                                        // Keep tools that don't have expiresAt (unlimited) or have not expired
+                                        if (!tool.expiresAt || tool.expiresAt === null || tool.expiresAt === undefined) {
+                                            return true;
+                                        }
+                                        return tool.expiresAt > now;
+                                    });
+
+                                    if (activeToolsData.length > 0) {
+                                        showActiveTools();
+                                        updateActiveToolsDisplay();
+                                        startActiveToolsCountdown();
+                                    } else {
+                                        hideActiveTools();
+                                    }
+                                } else {
+                                    hideActiveTools();
+                                }
+                            } catch (error) {
+                                console.error('Error loading active tools:', error);
+                                hideActiveTools();
+                            }
+                        }
+
+                        function showActiveTools() {
+                            const activeToolsSection = document.getElementById('activeToolsSection');
+                            if (activeToolsSection) {
+                                activeToolsSection.style.display = 'block';
+                            }
+                        }
+
+                        function hideActiveTools() {
+                            const activeToolsSection = document.getElementById('activeToolsSection');
+                            if (activeToolsSection) {
+                                activeToolsSection.style.display = 'none';
+                            }
+
+                            if (activeToolsInterval) {
+                                clearInterval(activeToolsInterval);
+                                activeToolsInterval = null;
+                            }
+                        }
+
+                        function updateActiveToolsDisplay() {
+                            const activeToolsGrid = document.getElementById('activeToolsGrid');
+                            if (!activeToolsGrid) return;
+
+                            activeToolsGrid.innerHTML = '';
+
+                            activeToolsData.forEach(session => {
+                                const tool = allTools.find(t => t.id === session.toolId) || { 
+                                    name: session.toolName || 'Unknown Tool',
+                                    category: 'General'
+                                };
+
+                                // Check if tool has expiration
+                                const hasExpiration = session.expiresAt && session.expiresAt > 0;
+
+                                // For tools without expiration, show "Unlimited"
+                                if (!hasExpiration) {
+                                    renderActiveToolCardHtml(session, tool, true);
+                                    return;
+                                }
+
+                                const timeLeft = session.expiresAt - Date.now();
+                                if (timeLeft <= 0) return; // Skip expired tools
+
+                                const totalDuration = session.duration || 30 * 60 * 1000; // Default 30 minutes
+                                const progressPercentage = Math.max(0, (timeLeft / totalDuration) * 100);
+
+                                renderActiveToolCardHtml(session, tool, false, timeLeft, progressPercentage);
+                            });
+                        }
+
+                        function renderActiveToolCardHtml(session, tool, isUnlimited, timeLeft = 0, progressPercentage = 100) {
+                            const activeToolsGrid = document.getElementById('activeToolsGrid');
+                            if (!activeToolsGrid) return;
+
+                            const activeToolCard = document.createElement('div');
+                            activeToolCard.className = 'active-tool-card';
+                            activeToolCard.innerHTML = `
+                                <div class="active-tool-header">
+                                    <div class="active-tool-info">
+                                        <div class="active-tool-icon">
+                                            <i class="fas fa-tools"></i>
+                                        </div>
+                                        <div class="active-tool-name">${tool.name}</div>
+                                    </div>
+                                    <div class="active-tool-status">
+                                        <i class="fas fa-circle"></i> Active
+                                    </div>
+                                </div>
+
+                                <div class="active-tool-countdown">
+                                    <div class="countdown-label">Time Remaining</div>
+                                    <div class="countdown-display" id="countdown-${session.toolId}">
+                                        ${isUnlimited ? 'Unlimited' : formatTime(timeLeft)}
+                                    </div>
+                                </div>
+
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: ${isUnlimited ? '100' : progressPercentage}%"></div>
+                                </div>
+
+                                <div class="active-tool-actions">
+                                    <button class="active-tool-btn btn-access" onclick="accessActiveTool('${session.accessKey || ''}', '${session.toolFile}')">
+                                        <i class="fas fa-external-link-alt"></i> Access Tool
+                                    </button>
+                                </div>
+                            `;
+
+                            activeToolsGrid.appendChild(activeToolCard);
+                        }
+
+                        function startActiveToolsCountdown() {
+                            if (activeToolsInterval) {
+                                clearInterval(activeToolsInterval);
+                            }
+
+                            activeToolsInterval = setInterval(() => {
+                                let hasActiveTools = false;
+
+                                activeToolsData.forEach(session => {
+                                    // Skip tools without expiration (Unlimited)
+                                    if (!session.expiresAt || session.expiresAt <= 0) {
+                                        hasActiveTools = true; // Count unlimited tools as active
+                                        return; // Continue to next iteration
+                                    }
+
+                                    const timeLeft = session.expiresAt - Date.now();
+                                    const countdownElement = document.getElementById(`countdown-${session.toolId}`);
+
+                                    if (timeLeft > 0) {
+                                        hasActiveTools = true;
+                                        if (countdownElement) {
+                                            countdownElement.textContent = formatTime(timeLeft);
+                                        }
+
+                                        // Update progress bar
+                                        const totalDuration = session.duration || 30 * 60 * 1000;
+                                        const progressPercentage = Math.max(0, (timeLeft / totalDuration) * 100);
+                                        const progressFill = countdownElement?.closest('.active-tool-card')?.querySelector('.progress-fill');
+                                        if (progressFill) {
+                                            progressFill.style.width = `${progressPercentage}%`;
+                                        }
+                                    }
+                                });
+
+                                if (!hasActiveTools) {
+                                    // Reload active tools to remove expired ones
+                                    loadActiveTools();
+                                }
+                            }, 1000);
+                        }
+
+                        function formatTime(milliseconds) {
+                            const totalSeconds = Math.max(0, Math.floor(milliseconds / 1000));
+                            const minutes = Math.floor(totalSeconds / 60);
+                            const seconds = totalSeconds % 60;
+                            return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                        }
+
+                        function accessActiveTool(accessKey, toolFile) {
+                            if (!toolFile || toolFile === 'undefined') {
+                                if (typeof ctToast === 'function') {
+                                    ctToast('error', 'Tool file not found. Please try activating the tool again.');
+                                } else {
+                                    alert('Tool file not found. Please try activating the tool again.');
+                                }
+                                return;
+                            }
+                            const toolUrl = `/tool/${toolFile}?key=${accessKey}`;
+                            window.open(toolUrl, '_blank');
+                        }
+
+
+                    </script>
+                    <script src="assets/js/unified-logout.js"></script>
+                    <script src="assets/js/scroll-to-top.js"></script>
+                </body>
+                </html>

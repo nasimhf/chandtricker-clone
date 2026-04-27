@@ -1,0 +1,379 @@
+/* Hamburger Menu CSS - Modern Clean Design */
+:root {
+    --primary-black: #0a0a0a;
+    --secondary-black: #1a1a1a;
+    --accent-black: #2a2a2a;
+    --gold: #FFD700;
+    --dark-gold: #B8860B;
+    --orange: #FFA500;
+    --silver: #C0C0C0;
+    --text: #ffffff;
+    --text-muted: #a0a0a0;
+    --gradient-gold: linear-gradient(135deg, #FFD700, #FFA500);
+    --shadow-gold: 0 10px 30px rgba(255, 215, 0, 0.3);
+    --glow-gold: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Base Styles */
+.navbar {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--gold);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.nav-brand:hover {
+    color: var(--orange);
+}
+
+.vip-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+/* Nav Links - Desktop */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.nav-link-public {
+    padding: 10px 18px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link-public:hover {
+    color: var(--gold);
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.nav-link-public i {
+    font-size: 0.9rem;
+}
+
+/* Auth Buttons */
+.login-btn, .signup-btn {
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.login-btn {
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    background: transparent;
+}
+
+.login-btn:hover {
+    background: var(--gold);
+    color: #000;
+    box-shadow: var(--shadow-gold);
+}
+
+.signup-btn {
+    background: var(--gradient-gold);
+    color: #000;
+}
+
+.signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-gold);
+}
+
+/* Nav Divider */
+.nav-divider {
+    width: 1px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 8px;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1005;
+    padding: 4px;
+    background: none;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 6px;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Navigation */
+@media (max-width: 900px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .nav-brand {
+        font-size: 1.1rem;
+    }
+
+    .vip-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hamburger {
+        display: flex !important;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 380px;
+        height: 100vh;
+        background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 50%, #151515 100%);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 90px 25px 40px;
+        gap: 6px;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-left: 2px solid rgba(255, 215, 0, 0.2);
+        box-shadow: -15px 0 50px rgba(0, 0, 0, 0.8);
+        z-index: 1004;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        background: linear-gradient(180deg, rgba(255, 215, 0, 0.08) 0%, transparent 100%);
+        pointer-events: none;
+    }
+
+    .nav-link-public {
+        width: 100%;
+        max-width: 280px;
+        padding: 16px 24px;
+        justify-content: flex-start;
+        font-size: 1rem;
+        background: rgba(26, 26, 26, 0.6);
+        border: 1.5px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        margin: 3px 0;
+    }
+
+    .nav-link-public:hover,
+    .nav-link-public.active {
+        background: rgba(255, 215, 0, 0.15);
+        border-color: var(--gold);
+        color: var(--gold);
+        transform: translateX(5px);
+        box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+    }
+
+    .nav-link-public i {
+        width: 24px;
+        text-align: center;
+    }
+
+    .nav-divider {
+        width: 80%;
+        height: 1px;
+        margin: 12px 0;
+        background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+    }
+
+    .login-btn, .signup-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        padding: 16px 24px;
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    .signup-btn {
+        background: var(--gradient-gold);
+    }
+
+    .signup-btn:hover,
+    .signup-btn.active {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+    }
+
+    .login-btn {
+        background: transparent;
+        border: 2px solid var(--gold);
+        color: var(--gold);
+    }
+
+    .login-btn:hover,
+    .login-btn.active {
+        background: var(--gold);
+        color: #000;
+    }
+
+    body.nav-open {
+        overflow: hidden;
+    }
+
+    body.nav-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1003;
+        backdrop-filter: blur(3px);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .nav-brand {
+        font-size: 1rem;
+    }
+
+    .vip-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hamburger {
+        width: 28px;
+        height: 22px;
+    }
+
+    .hamburger .bar {
+        height: 2.5px;
+    }
+
+    .nav-links {
+        width: 100%;
+        max-width: none;
+        padding: 80px 20px 30px;
+    }
+
+    .nav-link-public, .login-btn, .signup-btn {
+        max-width: 100%;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Overlay for mobile menu */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1003;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Smooth scroll for nav links */
+.nav-links a, .nav-links button {
+    scroll-margin-top: 80px;
+}

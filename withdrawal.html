@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal | Convert Coins to PKR, Cash Out - CHAND TRICKER</title>
+    <meta name="description" content="Withdraw your CHAND TRICKER coins to PKR balance. Convert coins to cash via JazzCash, Sadapay, EasyPaisa & other payment methods. View withdrawal history, schedule, and track your withdrawal status. Fast & secure cash out.">
+    <meta name="keywords" content="withdrawal, coin to pkr, convert coins, cash out, jazzcash, sadapay, easypaisa, payment withdrawal, withdraw coins, cash withdrawal, withdrawal history, withdrawal schedule">
+    <meta name="author" content="CHAND TRICKER">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="withdrawal.html">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/withdrawal.css">
+    <link rel="stylesheet" href="assets/css/unified-header.css">
+    <link rel="stylesheet" href="assets/css/unified-footer.css">
+    <link rel="stylesheet" href="assets/css/scroll-to-top.css">
+</head>
+<body>
+
+    <!-- Unified Navigation Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                    <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon">
+                    <span>CHAND TRICKER</span>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <!-- Public Navigation Items -->
+                <a href="index.html" class="nav-link-public"><i class="fas fa-home"></i> Home</a>
+                <a href="tools.html" class="nav-link-public"><i class="fas fa-tools"></i> Tools</a>
+                <a href="services.html" class="nav-link-public"><i class="fas fa-gem"></i> Services</a>
+                <a href="about.html" class="nav-link-public"><i class="fas fa-info-circle"></i> About</a>
+                <a href="contact.html" class="nav-link-public"><i class="fas fa-envelope"></i> Contact</a>
+
+                <!-- Authentication Links -->
+                <a href="logout.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+
+                <!-- Premium/User Features (Hidden until logged in) -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="profile.html" class="auth-only-link profile-btn" style="display: none;"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="quick-access.html" class="auth-only-link quick-access-btn" style="display: none;"><i class="fas fa-bolt"></i> Quick Access</a>
+
+                <!-- Tools & Services -->
+              <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="file-services.html" class="auth-only-link" style="display: none;"><i class="fab fa-servicestack"></i> File Services</a>
+              <a href="download-files.html" class="auth-only-link" style="display: none;"><i class="fas fa-download"></i> Files Download</a>
+              <a href="download-apk.html" class="auth-only-link" style="display: none;"><i class="fas fa-mobile-alt"></i> APK Download</a>
+
+                <!-- Account Management -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="payment.html" class="auth-only-link payment-btn" style="display: none;"><i class="fas fa-wallet"></i> Payment</a>
+                <a href="withdrawal.html" class="auth-only-link withdrawal-btn" style="display: none;"><i class="fas fa-money-bill-wave"></i> Withdrawal</a>
+                <a href="referral.html" class="auth-only-link referral-btn" style="display: none;"><i class="fas fa-user-plus"></i> Referral</a>
+
+                <!-- Tools & Support -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="user-search.html" class="auth-only-link user-search-btn" style="display: none;"><i class="fas fa-search"></i> User Search</a>
+                <a href="support-tickets.html" class="auth-only-link support-btn" style="display: none;"><i class="fas fa-ticket-alt"></i> Support Tickets</a>
+                <a href="blog.html" class="auth-only-link blog-btn" style="display: none;"><i class="fas fa-blog"></i> Blog</a>
+              <a href="video.html" class="auth-only-link" style="display: none;"><i class="fab fa-youtube-square"></i> Tricks Video</a>
+
+                <!-- Logout (Last Item) -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="logout.html" class="logout-btn logout-link auth-only-link" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation -->
+
+    <main class="withdrawal-container">
+        <header class="withdrawal-header">
+            <h1>Wallet</h1>
+            <p>Manage your coins and PKR balance</p>
+        </header>
+
+        <!-- Tabs Navigation -->
+        <div class="config-tabs" style="display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; justify-content: center;">
+            <button class="config-tab active" onclick="switchWithdrawalTab('balance')" id="tab-balance" style="background: rgba(42, 42, 42, 0.8); border: 1px solid var(--gold); color: var(--gold); padding: 14px 28px; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; font-weight: 500;">
+                <i class="fas fa-calendar-alt"></i> Withdrawal Schedule
+            </button>
+            <button class="config-tab" onclick="switchWithdrawalTab('coin-to-pkr')" id="tab-coin-to-pkr" style="background: rgba(42, 42, 42, 0.8); border: 1px solid var(--silver); color: var(--silver); padding: 14px 28px; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; font-weight: 500;">
+                <i class="fas fa-coins"></i> Coin to PKR
+            </button>
+            <button class="config-tab" onclick="switchWithdrawalTab('pkr-to-coin')" id="tab-pkr-to-coin" style="background: rgba(42, 42, 42, 0.8); border: 1px solid var(--silver); color: var(--silver); padding: 14px 28px; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; font-weight: 500;">
+                <i class="fas fa-money-bill-wave"></i> PKR to Coin
+            </button>
+            <button class="config-tab" onclick="switchWithdrawalTab('history')" id="tab-history" style="background: rgba(42, 42, 42, 0.8); border: 1px solid var(--silver); color: var(--silver); padding: 14px 28px; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; font-weight: 500;">
+                <i class="fas fa-history"></i> Recent Transactions
+            </button>
+        </div>
+
+        <!-- Tab Panel: Withdrawal Balance -->
+        <div id="balance-panel">
+            <div class="withdrawal-grid">
+                <section class="status-card">
+                    <h2 class="card-title"><i class="fas fa-wallet"></i> Account Status</h2>
+                    <div class="info-item" style="border-left: 4px solid var(--gold); background: rgba(255, 215, 0, 0.05);">
+                        <span class="info-label">Available Balance</span>
+                        <span class="info-value"><span id="pkrBalance">0</span> PKR</span>
+                    </div>
+                </section>
+
+                <section class="calendar-section">
+                    <h2 class="card-title"><i class="fas fa-calendar-alt"></i> Withdrawal Schedule</h2>
+                    <div class="calendar" id="calendar"></div>
+                    <p style="font-size: 0.75rem; color: var(--silver); margin-top: 15px; text-align: center;">
+                        <i class="fas fa-info-circle"></i> Withdrawals enabled on 28th and 29th of each month.
+                    </p>
+                </section>
+            </div>
+
+            <section class="withdrawal-form">
+                <h2 class="card-title"><i class="fas fa-paper-plane"></i> Submit Request</h2>
+                <div id="withdrawalNotice" style="background: rgba(255, 215, 0, 0.1); border: 1px solid var(--gold); color: var(--gold); padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; font-size: 0.9rem;">
+                    <i class="fas fa-calendar-alt"></i> <b>Withdrawal Schedule:</b> Withdrawals are allowed only on 28th and 29th of each month.
+                </div>
+                <form id="withdrawalForm">
+                    <div class="form-group">
+                        <label for="methodSelect">Choose Payment Method</label>
+                        <select id="methodSelect" name="method" required onchange="selectMethod(this.value)">
+                            <optgroup label="Mobile Wallets">
+                                <option value="jazzcash">JazzCash</option>
+                                <option value="easypaisa">EasyPaisa</option>
+                                <option value="sadapay">SadaPay</option>
+                                <option value="nayapay">NayaPay</option>
+                            </optgroup>
+                            <optgroup label="Bank Transfer">
+                                <option value="bank">All Banks</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label>Amount (PKR)</label>
+                            <input type="number" id="amount" placeholder="Min: 300" required>
+                        </div>
+                        <div class="form-group" id="accountNumberGroup">
+                            <label id="accountNumberLabel">Account Number</label>
+                            <input type="text" id="accountNumber" placeholder="Enter account number" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Account Holder Name</label>
+                        <input type="text" id="accountName" placeholder="Full Name" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <i class="fas fa-check-circle"></i> Submit Withdrawal
+                    </button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Tab Panel: Coin to PKR -->
+        <div id="coin-to-pkr-panel" style="display: none;">
+            <section class="calculator-section" id="withdrawSection">
+                <h2 class="calculator-title"><i class="fas fa-coins"></i> Convert Coins to PKR</h2>
+                
+                <div class="balance-display">
+                    <div class="balance-label">Your Coin Balance</div>
+                    <div class="balance-amount"><i class="fas fa-coins"></i> <span id="userCoins">0</span></div>
+                </div>
+
+                <div class="calculator-inputs">
+                    <div class="calc-input-group">
+                        <span class="input-prefix"><i class="fas fa-coins"></i></span>
+                        <input type="number" id="coinsInput" placeholder="Enter coins" min="0">
+                    </div>
+                    <div class="swap-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="calc-input-group pkr">
+                        <span class="input-prefix">Rs.</span>
+                        <input type="number" id="pkrInput" placeholder="Enter PKR" min="0">
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="exchange-rate-badge" id="exchangeRateBadge"><i class="fas fa-bolt"></i> Rate: 25 coins = 1 PKR</span>
+                </div>
+
+                <div id="validationMessage" class="validation-message" style="display: none;"></div>
+
+                <div class="calc-buttons">
+                    <button type="button" class="btn-use-all" onclick="useAllCoins()">
+                        <i class="fas fa-bolt"></i> Use All Coins
+                    </button>
+                    <button type="button" class="btn-withdraw-amount" id="btnConvert" onclick="convertCoinsToPKR()" disabled>
+                        <i class="fas fa-exchange-alt"></i> Convert Now
+                    </button>
+                </div>
+                
+                <p style="margin-top: 15px; font-size: 0.85rem; color: var(--success); text-align: center;">
+                    <i class="fas fa-check-circle"></i> Convert coins to PKR anytime - no date restrictions!
+                </p>
+            </section>
+        </div>
+
+        <!-- Tab Panel: PKR to Coin -->
+        <div id="pkr-to-coin-panel" style="display: none;">
+            <section class="calculator-section" id="buySection">
+                <h2 class="calculator-title"><i class="fas fa-money-bill-wave"></i> Buy Coins with PKR</h2>
+                <div class="balance-display">
+                    <div class="balance-label">Your PKR Balance</div>
+                    <div>
+                        <div class="balance-amount" style="color: var(--success);"><i class="fas fa-money-bill-wave"></i> <span id="pkrBalanceDisplay">0</span> PKR</div>
+                    </div>
+                </div>
+
+                <div class="calculator-inputs">
+                    <div class="calc-input-group pkr">
+                        <span class="input-prefix">Rs.</span>
+                        <input type="number" id="buyPkrInput" placeholder="Enter PKR" min="0">
+                    </div>
+                    <div class="swap-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="calc-input-group">
+                        <span class="input-prefix"><i class="fas fa-coins"></i></span>
+                        <input type="number" id="buyCoinsInput" placeholder="Enter coins" min="0">
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <span class="exchange-rate-badge" id="buyExchangeRateBadge"><i class="fas fa-bolt"></i> Rate: 1 PKR = 5 coins</span>
+                </div>
+
+                <div id="buyValidationMessage" class="validation-message" style="display: none;"></div>
+
+                <div class="calc-buttons">
+                    <button type="button" class="btn-use-all" onclick="useAllPkr()">
+                        <i class="fas fa-bolt"></i> Use All PKR
+                    </button>
+                    <button type="button" class="btn-withdraw-amount" id="btnBuyCoins" onclick="buyCoins()" disabled>
+                        <i class="fas fa-shopping-cart"></i> Buy These Coins
+                    </button>
+                </div>
+                
+                <p style="margin-top: 15px; font-size: 0.85rem; color: var(--success); text-align: center;">
+                    <i class="fas fa-check-circle"></i> Buy coins anytime - no date restrictions!
+                </p>
+            </section>
+        </div>
+
+        <!-- Tab Panel: Recent Transactions -->
+        <div id="history-panel" style="display: none;">
+            <section class="history-section">
+                <h2 class="card-title"><i class="fas fa-history"></i> Recent Transactions</h2>
+                
+                <!-- Search & Filter -->
+                <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                    <input type="text" id="historySearch" placeholder="Search..." onkeyup="filterHistory()" style="flex:1; min:150px; padding:10px; border-radius:8px; border:1px solid #444; background:#222; color:#fff;">
+                    <select id="historyFilter" onchange="filterHistory()" style="padding:10px; border-radius:8px; border:1px solid #444; background:#222; color:#fff;">
+                        <option value="all">All Types</option>
+                        <option value="withdraw">Withdraw</option>
+                        <option value="convert_coins_to_pkr">Coin→PKR</option>
+                        <option value="buy_coins">Buy Coins</option>
+                    </select>
+                    <select id="statusFilter" onchange="filterHistory()" style="padding:10px; border-radius:8px; border:1px solid #444; background:#222; color:#fff;">
+                        <option value="all">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="in_process">In Process</option>
+                        <option value="completed">Completed</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+                
+                <div id="historyList" class="history-list"></div>
+                <div id="historyPagination" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;"></div>
+            </section>
+        </div>
+    </main>
+      <footer class="unified-footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <div class="footer-logo">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                  <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon" style="width: 32px; height: 32px; border-radius: 50%;">
+                  <span>CHAND TRICKER</span>
+                </a>
+              </div>
+              <p>Your trusted platform for premium digital solutions, tools, and services. Join thousands of users worldwide.</p>
+            </div>
+
+            <div class="footer-section">
+              <h4><i class="fas fa-link"></i> Quick Links</h4>
+              <ul>
+                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="tools.html"><i class="fas fa-chevron-right"></i> Tools</a></li>
+                <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h4><i class="fas fa-file-alt"></i> Policies</h4>
+              <ul>
+                <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                <li><a href="refund-policy.html"><i class="fas fa-chevron-right"></i> Refund Policy</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/CH4ND.TRICKER" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://t.me/CHANDTRICKER" class="social-link" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://www.instagram.com/chand.tricker/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@chandtricker/" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>&copy; <strong>2025 - <span id="copyright-year">2026</span> CHAND TRICKER. All rights reserved.</strong> | Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i> <strong>CHAND TRICKER & ATF TEAM</strong></p>
+          </div>
+        </div>
+      </footer>
+    <script>
+        // Auto-update copyright year
+        var copyrightYear = document.getElementById('copyright-year');
+        if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/unified-logout.js"></script>
+      <script src="assets/js/unified-navigation.js"></script>
+      <script src="assets/js/scroll-to-top.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="chat-popup.js"></script>
+    <script src="assets/js/load-navigation.js"></script>
+    <script src="assets/js/withdrawal.js"></script>
+    <script>
+        // Number formatting utility
+        function formatNumberShort(num) {
+            if (num === null || num === undefined) return '0';
+            if (num >= 1e9) return (num / 1e9).toFixed(1).replace(/\.0$/, '') + 'B';
+            if (num >= 1e6) return (num / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
+            if (num >= 1e3) return (num / 1e3).toFixed(1).replace(/\.0$/, '') + 'K';
+            return num.toString();
+        }
+
+        function switchWithdrawalTab(type) {
+            document.querySelectorAll('.config-tab').forEach(tab => {
+                tab.classList.remove('active');
+                tab.style.borderColor = 'var(--silver)';
+                tab.style.color = 'var(--silver)';
+            });
+            
+            document.getElementById('tab-' + type).classList.add('active');
+            document.getElementById('tab-' + type).style.borderColor = 'var(--gold)';
+            document.getElementById('tab-' + type).style.color = 'var(--gold)';
+            
+            document.getElementById('balance-panel').style.display = 'none';
+            document.getElementById('coin-to-pkr-panel').style.display = 'none';
+            document.getElementById('pkr-to-coin-panel').style.display = 'none';
+            document.getElementById('history-panel').style.display = 'none';
+            
+            document.getElementById(type + '-panel').style.display = 'block';
+        }
+
+        function renderCalendar() {
+            const calendarEl = document.getElementById('calendar');
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth();
+            const today = now.getDate();
+            const allowedDays = [28, 29];
+            
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            calendarEl.innerHTML = '';
+            
+            // Fill empty days
+            for (let i = 0; i < firstDay; i++) {
+                calendarEl.innerHTML += '<div class="calendar-day" style="opacity: 0"></div>';
+            }
+            
+            for (let day = 1; day <= daysInMonth; day++) {
+                let classes = 'calendar-day';
+                if (allowedDays.includes(day)) classes += ' enabled';
+                if (day === today) classes += ' today';
+                calendarEl.innerHTML += `<div class="${classes}">${day}</div>`;
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCalendar();
+            loadCoinRate();
+            loadUserBalance();
+        });
+
+        // Calculator variables
+        let coinRateData = {
+            coinsPerPKR: 25,
+            buyCoinsPerPKR: 5,
+            PKRperCoin: 0.04,
+            minWithdrawalCoins: 100,
+            minWithdrawalPKR: 20,
+            maxWithdrawalPKR: 5000,
+            minBuyCoins: 20,
+            minBuyPKR: 1,
+            maxBuyPKR: 10000
+        };
+        let userBalance = 0;
+        let userPkrBalance = 0;
+
+        // Calculator variables
+        async function loadCoinRate() {
+            try {
+                const response = await fetch('/api/user/coin-rate');
+                const data = await response.json();
+                if (data.success) {
+                    coinRateData = {
+                        coinsPerPKR: data.coinsPerPKR,
+                        buyCoinsPerPKR: data.buyCoinsPerPKR || data.coinsPerPKR,
+                        PKRperCoin: data.PKRperCoin,
+                        minWithdrawalCoins: data.minWithdrawalCoins,
+                        minWithdrawalPKR: data.minWithdrawalPKR,
+                        maxWithdrawalPKR: data.maxWithdrawalPKR,
+                        minBuyCoins: data.minBuyCoins || 20,
+                        minBuyPKR: data.minBuyPKR || 1,
+                        maxBuyPKR: data.maxBuyPKR || 10000
+                    };
+                    updateExchangeRateBadge();
+                    document.getElementById('buyExchangeRateBadge').innerHTML = `<i class="fas fa-bolt"></i> Rate: 1 PKR = ${coinRateData.buyCoinsPerPKR} coins`;
+                }
+            } catch (error) {
+                console.error('Error loading coin rate:', error);
+            }
+        }
+
+        // Load user PKR balance
+        async function loadUserPkrBalance() {
+            try {
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    document.getElementById('pkrBalanceDisplay').textContent = '0';
+                    userPkrBalance = 0;
+                    return;
+                }
+                const response = await fetch('/api/user', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const data = await response.json();
+                if (data.success) {
+                    userPkrBalance = data.user.pkrBalance || 0;
+                    document.getElementById('pkrBalanceDisplay').textContent = userPkrBalance.toLocaleString();
+                }
+            } catch (error) {
+                console.error('Error loading PKR balance:', error);
+                userPkrBalance = 0;
+                document.getElementById('pkrBalanceDisplay').textContent = '0';
+            }
+        }
+
+        // Load user balance
+        async function loadUserBalance() {
+            try {
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    document.getElementById('userCoins').textContent = '0';
+                    document.getElementById('pkrBalanceDisplay').textContent = '0';
+                    return;
+                }
+                const response = await fetch('/api/user', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const data = await response.json();
+                if (data.success) {
+                    userBalance = data.user.coins || 0;
+                    userPkrBalance = data.user.pkrBalance || 0;
+                    document.getElementById('userCoins').textContent = formatNumberShort(userBalance);
+                    document.getElementById('pkrBalanceDisplay').textContent = userPkrBalance.toLocaleString();
+                }
+            } catch (error) {
+                console.error('Error loading user balance:', error);
+                userBalance = 0;
+                userPkrBalance = 0;
+                document.getElementById('userCoins').textContent = '0';
+                document.getElementById('pkrBalanceDisplay').textContent = '0';
+            }
+        }
+
+        // Update exchange rate badge
+        function updateExchangeRateBadge() {
+            const badge = document.getElementById('exchangeRateBadge');
+            badge.innerHTML = `<i class="fas fa-bolt"></i> Rate: ${coinRateData.coinsPerPKR} coins = 1 PKR`;
+        }
+
+        // Calculate PKR from coins (for withdraw)
+        function calculatePKR(coins) {
+            return coins / coinRateData.coinsPerPKR;
+        }
+
+        // Calculate coins from PKR (for withdraw)
+        function calculateCoins(pkr) {
+            return pkr * coinRateData.coinsPerPKR;
+        }
+
+        // Calculate coins from PKR (for buy - uses buyCoinsPerPKR)
+        function calculateBuyCoins(pkr) {
+            return pkr * coinRateData.buyCoinsPerPKR;
+        }
+
+        // Calculate PKR from coins (for buy - uses buyCoinsPerPKR)
+        function calculateBuyPKR(coins) {
+            return coins / coinRateData.buyCoinsPerPKR;
+        }
+
+        // Validate withdrawal amount
+        function validateAmount() {
+            const coinsInput = document.getElementById('coinsInput');
+            const pkrInput = document.getElementById('pkrInput');
+            const validationMsg = document.getElementById('validationMessage');
+            const withdrawBtn = document.getElementById('btnConvert');
+
+            const coins = parseFloat(coinsInput.value) || 0;
+            const pkr = parseFloat(pkrInput.value) || 0;
+
+            let isValid = true;
+            let message = '';
+            let messageType = '';
+
+            // Check insufficient coins
+            if (coins > userBalance) {
+                isValid = false;
+                message = '<i class="fas fa-exclamation-circle"></i> Insufficient coins! You only have ' + formatNumberShort(userBalance) + ' coins.';
+                messageType = 'error';
+            }
+            // Check below minimum
+            else if (coins > 0 && coins < coinRateData.minWithdrawalCoins) {
+                isValid = false;
+                message = '<i class="fas fa-exclamation-circle"></i> Below minimum conversion! Minimum: ' + coinRateData.minWithdrawalCoins + ' coin required.';
+                messageType = 'warning';
+            }
+            // Check exceeds maximum
+            else if (pkr > coinRateData.maxWithdrawalPKR) {
+                isValid = false;
+                message = '<i class="fas fa-exclamation-circle"></i> Exceeds maximum conversion! Maximum: ' + coinRateData.maxWithdrawalPKR + ' PKR.';
+                messageType = 'warning';
+            }
+            // Check if no amount entered
+            else if (coins === 0 && pkr === 0) {
+                isValid = false;
+                message = '';
+                messageType = '';
+            }
+            // Valid
+            else {
+                message = '<i class="fas fa-check-circle"></i> Valid amount! Ready to convert to PKR.';
+                messageType = 'success';
+            }
+
+            if (message) {
+                validationMsg.style.display = 'flex';
+                validationMsg.className = 'validation-message ' + messageType;
+                validationMsg.innerHTML = message;
+            } else {
+                validationMsg.style.display = 'none';
+            }
+
+            withdrawBtn.disabled = !isValid;
+            return isValid;
+        }
+
+        // Coins input handler
+        document.getElementById('coinsInput').addEventListener('input', function() {
+            const coins = parseFloat(this.value) || 0;
+            const pkr = calculatePKR(coins);
+            document.getElementById('pkrInput').value = pkr > 0 ? pkr.toFixed(2) : '';
+            validateAmount();
+        });
+
+        // PKR input handler
+        document.getElementById('pkrInput').addEventListener('input', function() {
+            const pkr = parseFloat(this.value) || 0;
+            const coins = calculateCoins(pkr);
+            document.getElementById('coinsInput').value = coins > 0 ? Math.round(coins) : '';
+            validateAmount();
+        });
+
+        // Use all coins button
+        function useAllCoins() {
+            document.getElementById('coinsInput').value = userBalance;
+            const pkr = calculatePKR(userBalance);
+            document.getElementById('pkrInput').value = pkr.toFixed(2);
+            validateAmount();
+        }
+
+        let currentMode = 'convert'; // 'convert' or 'withdraw'
+
+        function setConversionMode(mode) {
+            currentMode = mode;
+            const btnConvert = document.getElementById('btnConvertMode');
+            const btnWithdraw = document.getElementById('btnWithdrawMode');
+            const actionBtn = document.getElementById('btnWithdrawAmount');
+            const validationMsg = document.getElementById('validationMessage');
+            
+            if (mode === 'convert') {
+                btnConvert.classList.add('active');
+                btnWithdraw.classList.remove('active');
+                actionBtn.innerHTML = '<i class="fas fa-exchange-alt"></i> Convert to PKR';
+                actionBtn.disabled = false;
+                validationMsg.style.display = 'none';
+            } else {
+                btnConvert.classList.remove('active');
+                btnWithdraw.classList.add('active');
+                
+                const now = new Date();
+                const day = now.getDate();
+            const allowedDays = [28, 29];
+                
+                if (allowedDays.includes(day)) {
+                    actionBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Withdraw to Account';
+                    actionBtn.disabled = false;
+                    validationMsg.style.display = 'none';
+                } else {
+                    actionBtn.innerHTML = '<i class="fas fa-lock"></i> Window Closed';
+                    actionBtn.disabled = true;
+                    validationMsg.style.display = 'flex';
+                    validationMsg.className = 'validation-message warning';
+                    validationMsg.innerHTML = '<i class="fas fa-exclamation-circle"></i> Withdrawal window is closed. Use "Convert (Instant)" to convert coins to PKR anytime.';
+                }
+            }
+        }
+
+        function handleCoinAction() {
+            if (currentMode === 'convert') {
+                convertCoinsToPKR();
+            } else {
+                const pkr = parseFloat(document.getElementById('pkrInput').value) || 0;
+                if (pkr > 0) {
+                    document.getElementById('amount').value = pkr;
+                    document.getElementById('withdrawalForm').scrollIntoView({ behavior: 'smooth' });
+                    
+                    const accountNumber = document.getElementById('accountNumber').value;
+                    const accountName = document.getElementById('accountName').value;
+                    
+                    if (accountNumber && accountName) {
+                        ctAlert('info', 'Confirm Withdrawal', `You are about to withdraw ${pkr} PKR to your account. Click OK to submit your withdrawal request.`).then(function() {
+                            document.getElementById('withdrawalForm').dispatchEvent(new Event('submit'));
+                        });
+                    }
+                }
+            }
+        }
+
+        // Convert coins to PKR (instant conversion)
+        async function convertCoinsToPKR() {
+            const coins = parseInt(document.getElementById('coinsInput').value) || 0;
+            const pkr = parseFloat(document.getElementById('pkrInput').value) || 0;
+
+            if (coins <= 0 || pkr <= 0) {
+                ctAlert('error', 'Invalid Amount', 'Please enter a valid amount to convert.');
+                return;
+            }
+
+            if (!validateAmount()) {
+                return;
+            }
+
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch('/api/user/convert-coins-to-pkr', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ coins: coins })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Conversion Successful!',
+                        html: `You have converted ${coins.toLocaleString()} coins to ${pkr.toFixed(2)} PKR.<br>Your new PKR balance: ${data.newPkrBalance.toFixed(2)} PKR`,
+                        confirmButtonColor: '#22c55e'
+                    }).then(() => {
+                        document.getElementById('coinsInput').value = '';
+                        document.getElementById('pkrInput').value = '';
+                        document.getElementById('validationMessage').style.display = 'none';
+                        loadUserBalance();
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Conversion Failed',
+                        text: data.message || 'Failed to convert coins.',
+                        confirmButtonColor: '#ef4444'
+                    });
+                }
+            } catch (error) {
+                console.error('Error converting coins:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while converting coins.',
+                    confirmButtonColor: '#ef4444'
+                });
+            }
+        }
+
+        // Buy coins function
+        function validateBuyAmount() {
+            const pkrInput = document.getElementById('buyPkrInput');
+            const coinsInput = document.getElementById('buyCoinsInput');
+            const validationMsg = document.getElementById('buyValidationMessage');
+            const buyBtn = document.getElementById('btnBuyCoins');
+
+            const pkr = parseFloat(pkrInput.value) || 0;
+            const coins = parseFloat(coinsInput.value) || 0;
+
+            let isValid = true;
+            let message = '';
+            let messageType = '';
+
+            if (pkr > userPkrBalance) {
+                isValid = false;
+                message = '<i class="fas fa-exclamation-circle"></i> Insufficient PKR balance! You only have ' + userPkrBalance.toLocaleString() + ' PKR.';
+                messageType = 'error';
+            }
+            else if (pkr > 0 && pkr < coinRateData.minBuyPKR) {
+                isValid = false;
+                message = '<i class="fas fa-exclamation-circle"></i> Below minimum purchase! Minimum: ' + coinRateData.minBuyPKR + ' PKR.';
+                messageType = 'warning';
+            }
+            else if (pkr > coinRateData.maxBuyPKR) {
+                isValid = false;
+                message = '<i class="fas fa-exclamation-circle"></i> Exceeds maximum purchase! Maximum: ' + coinRateData.maxBuyPKR + ' PKR.';
+                messageType = 'warning';
+            }
+            else if (pkr === 0 && coins === 0) {
+                isValid = false;
+                message = '';
+                messageType = '';
+            }
+            else {
+                message = '<i class="fas fa-check-circle"></i> Valid amount! Ready to purchase coins.';
+                messageType = 'success';
+            }
+
+            if (message) {
+                validationMsg.style.display = 'flex';
+                validationMsg.className = 'validation-message ' + messageType;
+                validationMsg.innerHTML = message;
+            } else {
+                validationMsg.style.display = 'none';
+            }
+
+            buyBtn.disabled = !isValid;
+            return isValid;
+        }
+
+        // PKR input handler for buying coins
+        document.getElementById('buyPkrInput').addEventListener('input', function() {
+            const pkr = parseFloat(this.value) || 0;
+            const coins = calculateBuyCoins(pkr);
+            document.getElementById('buyCoinsInput').value = coins > 0 ? Math.round(coins) : '';
+            validateBuyAmount();
+        });
+
+        // Coins input handler for buying coins
+        document.getElementById('buyCoinsInput').addEventListener('input', function() {
+            const coins = parseFloat(this.value) || 0;
+            const pkr = calculateBuyPKR(coins);
+            document.getElementById('buyPkrInput').value = pkr > 0 ? pkr.toFixed(2) : '';
+            validateBuyAmount();
+        });
+
+        // Use all PKR button
+        function useAllPkr() {
+            document.getElementById('buyPkrInput').value = userPkrBalance;
+            const coins = calculateBuyCoins(userPkrBalance);
+            document.getElementById('buyCoinsInput').value = coins > 0 ? Math.round(coins) : '';
+            validateBuyAmount();
+        }
+
+        // Buy coins function
+        async function buyCoins() {
+            const pkr = parseFloat(document.getElementById('buyPkrInput').value) || 0;
+            const coins = parseInt(document.getElementById('buyCoinsInput').value) || 0;
+
+            if (pkr <= 0 || coins <= 0) {
+                ctAlert('error', 'Invalid Amount', 'Please enter a valid amount to purchase.');
+                return;
+            }
+
+            if (!validateBuyAmount()) {
+                return;
+            }
+
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch('/api/user/buy-coins', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ pkr: pkr, coins: coins })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: `You have successfully purchased ${coins} coins!`,
+                        confirmButtonColor: '#22c55e'
+                    }).then(() => {
+                        document.getElementById('buyPkrInput').value = '';
+                        document.getElementById('buyCoinsInput').value = '';
+                        document.getElementById('buyValidationMessage').style.display = 'none';
+                        loadUserBalance();
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: data.message || 'Failed to purchase coins.',
+                        confirmButtonColor: '#ef4444'
+                    });
+                }
+            } catch (error) {
+                console.error('Error buying coins:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred while purchasing coins.',
+                    confirmButtonColor: '#ef4444'
+                });
+            }
+        }
+
+        // Preloader
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.getElementById('preloader');
+            const progressBar = document.getElementById('loaderProgressBar');
+            const percentage = document.getElementById('loaderPercentage');
+            
+            if (!preloader || !progressBar || !percentage) return;
+            
+            let progress = 0;
+            
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        preloader.classList.add('hidden');
+                    }, 500);
+                }
+                progressBar.style.width = progress + '%';
+                percentage.textContent = Math.floor(progress) + '%';
+            }, 200);
+
+            // Create particles
+            const particlesContainer = document.getElementById('loaderParticles');
+            if (particlesContainer) {
+                for (let i = 0; i < 20; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'loader-particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 5 + 's';
+                    particle.style.animationDuration = (3 + Math.random() * 4) + 's';
+                    particlesContainer.appendChild(particle);
+                }
+            }
+        });
+        
+        const ctIcons = { success: 'fa-check-circle', error: 'fa-times-circle', warning: 'fa-exclamation-circle', info: 'fa-info-circle' };
+        function ctAlert(type, title, text) {
+            return new Promise(function(resolve) {
+                var overlay = document.createElement('div');
+                overlay.className = 'ct-overlay';
+                var dialog = document.createElement('div');
+                dialog.className = 'ct-dialog';
+                var iconEl = document.createElement('div');
+                iconEl.className = 'ct-icon ' + type;
+                iconEl.innerHTML = '<i class="fas ' + (ctIcons[type] || ctIcons.info) + '"></i>';
+                var h3 = document.createElement('h3');
+                h3.textContent = title;
+                var p = document.createElement('p');
+                p.textContent = text;
+                var btn = document.createElement('button');
+                btn.className = 'ct-btn ct-btn-ok';
+                btn.textContent = 'OK';
+                btn.onclick = function() { overlay.remove(); resolve(); };
+                dialog.append(iconEl, h3, p, btn);
+                overlay.appendChild(dialog);
+                overlay.addEventListener('click', function(e) { if (e.target === overlay) { overlay.remove(); resolve(); } });
+                document.body.appendChild(overlay);
+            });
+        }
+    </script>
+<script src="assets/js/footer.js"></script>
+</body>
+</html>

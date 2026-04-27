@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Support Tickets | Get Help & Submit Tickets - CHAND TRICKER</title>
+    <meta name="description" content="Submit support tickets to CHAND TRICKER. Get help with tools, accounts, payments, and technical issues.">
+    <meta name="keywords" content="support tickets, help desk, customer support, CHAND TRICKER support">
+    <meta name="author" content="CHAND TRICKER">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="support-tickets.html">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/hamburger.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/unified-header.css">
+    <link rel="stylesheet" href="assets/css/unified-footer.css">
+    <link rel="stylesheet" href="assets/css/scroll-to-top.css">
+    <link rel="stylesheet" href="assets/css/support-tickets.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Force show nav */
+        .nav-links {
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        .nav-link-public, .login-btn, .signup-btn {
+            display: flex !important;
+        }
+        /* Desktop & Mobile Responsive */
+        @media (min-width: 769px) {
+            .tickets-container { padding-top: 90px; padding-left: 20px; padding-right: 20px; }
+            .tickets-stats { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+            .stat-card { padding: 20px; flex-direction: column; text-align: center; }
+            .stat-icon { width: 50px; height: 50px; font-size: 1.5rem; }
+            .stat-number { font-size: 1.8rem; }
+            .stat-label { font-size: 0.9rem; }
+            .ticket-item { padding: 20px; flex-direction: row; }
+            .reply-section { padding: 20px; margin-top: 20px; }
+        }
+        @media (max-width: 768px) {
+            .tickets-container { padding-top: 70px !important; padding-left: 10px !important; padding-right: 10px !important; }
+            .tickets-header { flex-direction: column !important; gap: 15px !important; }
+            .header-content h1 { font-size: 1.5rem; }
+            .tickets-stats { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
+            .ticket-item { flex-direction: column !important; padding: 12px !important; }
+            .ticket-info { width: 100% !important; margin-top: 10px; }
+            .ticket-actions { margin-top: 10px; width: 100%; justify-content: center; }
+            .create-ticket-form { padding: 15px !important; }
+            .form-group { margin-bottom: 12px !important; }
+            .form-input, .form-textarea { width: 100% !important; font-size: 14px !important; }
+            .modal-content { width: 95% !important; margin: 10px !important; padding: 15px !important; }
+            .chat-messages { max-height: 300px !important; }
+            .message-input { width: 100% !important; }
+            .reply-section { padding: 12px !important; margin-top: 15px !important; }
+            .reply-input-container { flex-direction: column !important; gap: 10px !important; }
+            .reply-input-container textarea { width: 100% !important; min-height: 60px !important; font-size: 14px !important; }
+            .reply-input-container button { width: 100% !important; }
+            .features-section { padding: 20px 10px !important; }
+            .stat-card { padding: 10px !important; flex-direction: row !important; gap: 8px !important; justify-content: flex-start; }
+            .stat-icon { width: 35px !important; height: 35px !important; font-size: 14px !important; }
+            .stat-number { font-size: 1.2rem !important; }
+            .stat-label { font-size: 0.7rem !important; }
+            .tickets-filter { overflow-x: auto; padding-bottom: 10px; }
+            .filter-btn { padding: 6px 12px; font-size: 0.75rem; white-space: nowrap; }
+        }
+    </style>
+</head><body>
+    <!-- Unified Navigation Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                    <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon">
+                    <span>CHAND TRICKER</span>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <!-- Public Navigation Items -->
+                <a href="index.html" class="nav-link-public"><i class="fas fa-home"></i> Home</a>
+                <a href="tools.html" class="nav-link-public"><i class="fas fa-tools"></i> Tools</a>
+                <a href="services.html" class="nav-link-public"><i class="fas fa-gem"></i> Services</a>
+                <a href="about.html" class="nav-link-public"><i class="fas fa-info-circle"></i> About</a>
+                <a href="contact.html" class="nav-link-public"><i class="fas fa-envelope"></i> Contact</a>
+
+                <!-- Authentication Links -->
+                <a href="logout.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="signup.html" class="signup-btn"><i class="fas fa-user-plus"></i> Sign Up</a>
+
+                <!-- Premium/User Features (Hidden until logged in) -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="profile.html" class="auth-only-link profile-btn" style="display: none;"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="quick-access.html" class="auth-only-link quick-access-btn" style="display: none;"><i class="fas fa-bolt"></i> Quick Access</a>
+
+                <!-- Tools & Services -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="file-services.html" class="auth-only-link" style="display: none;"><i class="fab fa-servicestack"></i> File Services</a>
+                <a href="download-files.html" class="auth-only-link" style="display: none;"><i class="fas fa-download"></i> Files Download</a>
+                <a href="download-apk.html" class="auth-only-link" style="display: none;"><i class="fas fa-mobile-alt"></i> APK Download</a>
+
+                <!-- Account Management -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="payment.html" class="auth-only-link payment-btn" style="display: none;"><i class="fas fa-wallet"></i> Payment</a>
+                <a href="withdrawal.html" class="auth-only-link withdrawal-btn" style="display: none;"><i class="fas fa-money-bill-wave"></i> Withdrawal</a>
+                <a href="referral.html" class="auth-only-link referral-btn" style="display: none;"><i class="fas fa-user-plus"></i> Referral</a>
+
+                <!-- Tools & Support -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="user-search.html" class="auth-only-link user-search-btn" style="display: none;"><i class="fas fa-search"></i> User Search</a>
+                <a href="support-tickets.html" class="auth-only-link support-btn" style="display: none;"><i class="fas fa-ticket-alt"></i> Support Tickets</a>
+                <a href="blog.html" class="auth-only-link blog-btn" style="display: none;"><i class="fas fa-blog"></i> Blog</a>
+                <a href="video.html" class="auth-only-link" style="display: none;"><i class="fab fa-youtube-square"></i> Tricks Video</a>
+
+                <!-- Logout (Last Item) -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="logout.html" class="logout-btn logout-link auth-only-link" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation -->
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 40vh; padding: 80px 20px 40px;">
+        <div class="hero-background"></div>
+        <div class="floating-elements">
+            <i class="floating-icon fas fa-ticket-alt"></i>
+            <i class="floating-icon fas fa-headset"></i>
+            <i class="floating-icon fas fa-user-headset"></i>
+            <i class="floating-icon fas fa-envelope-open-text"></i>
+        </div>
+        <div class="hero-content">
+            <div class="brand-showcase">
+                <div class="vip-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>SUPPORT</span>
+                </div>
+                <h1 class="main-logo">Support Tickets</h1>
+                <p class="brand-tagline">We're Here to Help</p>
+            </div>
+
+            <h2 class="hero-title">
+                <span class="typing-text" id="typingText"></span>
+            </h2>
+            <p class="hero-subtitle">Submit support tickets and get help from our 24/7 support team. We're here to assist you with any issues or questions.</p>
+
+            <div class="cta-buttons">
+                <button class="cta-btn cta-btn-primary" onclick="showCreateTicketModal()">
+                    <i class="fas fa-plus"></i>
+                    Create New Ticket
+                </button>
+                <button class="cta-btn cta-btn-secondary" onclick="document.getElementById('ticketsList').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-list"></i>
+                    View My Tickets
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="features-section" style="padding: 30px 15px; background: linear-gradient(135deg, rgba(42,42,42,0.5), rgba(26,26,26,0.8));">
+        <div class="container" style="max-width: 100%; padding: 0;">
+            <div class="tickets-stats">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-inbox"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="totalTickets">0</span>
+                        <span class="stat-label">Total Tickets</span>
+                    </div>
+                </div>
+                <div class="stat-card pending">
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="pendingTickets">0</span>
+                        <span class="stat-label">Pending</span>
+                    </div>
+                </div>
+                <div class="stat-card open">
+                    <div class="stat-icon"><i class="fas fa-envelope-open"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="openTickets">0</span>
+                        <span class="stat-label">Open</span>
+                    </div>
+                </div>
+                <div class="stat-card closed">
+                    <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" id="closedTickets">0</span>
+                        <span class="stat-label">Closed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section class="content-section" style="padding: 40px 20px 80px;">
+        <div class="container">
+            <div class="tickets-filter">
+                <button class="filter-btn active" data-filter="all" onclick="filterTickets('all')">
+                    <i class="fas fa-list"></i> All Tickets
+                </button>
+                <button class="filter-btn" data-filter="pending" onclick="filterTickets('pending')">
+                    <i class="fas fa-clock"></i> Pending
+                </button>
+                <button class="filter-btn" data-filter="open" onclick="filterTickets('open')">
+                    <i class="fas fa-envelope-open"></i> Open
+                </button>
+                <button class="filter-btn" data-filter="closed" onclick="filterTickets('closed')">
+                    <i class="fas fa-check-circle"></i> Closed
+                </button>
+            </div>
+
+            <div class="tickets-content" style="margin-bottom: 30px;">
+                <div class="tickets-list" id="ticketsList">
+                    <div class="loading-state">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading your tickets...</p>
+                    </div>
+                </div>
+
+                <div class="ticket-detail" id="ticketDetail" style="display: none;">
+                    <div class="detail-header">
+                        <button class="btn-back" onclick="closeTicketDetail()">
+                            <i class="fas fa-arrow-left"></i> Back to Tickets
+                        </button>
+                        <div class="ticket-actions">
+                            <button class="btn-close-ticket" id="closeTicketBtn" onclick="closeCurrentTicket()">
+                                <i class="fas fa-times-circle"></i> Close Ticket
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ticket-info-card" id="ticketInfoCard">
+                        <div class="ticket-title">
+                            <span class="ticket-number" id="detailTicketNumber">#1</span>
+                            <h2 id="detailSubject">Loading...</h2>
+                            <span class="ticket-status" id="detailStatus">Open</span>
+                        </div>
+                        <div class="ticket-meta">
+                            <span><i class="fas fa-calendar"></i> Created: <span id="detailCreated">-</span></span>
+                            <span><i class="fas fa-clock"></i> Last Updated: <span id="detailUpdated">-</span></span>
+                            <span><i class="fas fa-tag"></i> Category: <span id="detailCategory">Support</span></span>
+                        </div>
+                    </div>
+
+                    <div class="messages-container" id="messagesContainer">
+                        <div class="loading-state">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading messages...</p>
+                        </div>
+                    </div>
+
+                    <div class="reply-section" id="replySection">
+                        <div class="reply-input-container">
+                            <textarea id="replyMessage" placeholder="Type your message here..." rows="3"></textarea>
+                            <button class="btn-send" onclick="sendReply()">
+                                <i class="fas fa-paper-plane"></i> Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <h3>No Tickets Yet</h3>
+                <p>You haven't created any support tickets. Create one if you need help!</p>
+                <button class="btn-create-ticket" onclick="showCreateTicketModal()">
+                    <i class="fas fa-plus"></i> Create Your First Ticket
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create Ticket Modal -->
+    <div class="modal-overlay" id="createTicketModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2><i class="fas fa-plus-circle"></i> Create New Ticket</h2>
+                <button class="modal-close" onclick="hideCreateTicketModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="createTicketForm" onsubmit="createTicket(event)">
+                    <div class="form-group">
+                        <label for="ticketSubject">
+                            <i class="fas fa-heading"></i> Subject
+                        </label>
+                        <input type="text" id="ticketSubject" placeholder="Type your issue" required maxlength="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketCategory">
+                            <i class="fas fa-tag"></i> Category
+                        </label>
+                        <select id="ticketCategory" required>
+                            <option value="support">Support</option>
+                            <option value="tools">Tools</option>
+                            <option value="payments">Payments</option>
+                            <option value="issue">Issue</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketMessage">
+                            <i class="fas fa-comment-alt"></i> Message
+                        </label>
+                        <textarea id="ticketMessage" placeholder="Describe your issue in detail..." rows="5" required minlength="10" maxlength="600"></textarea>
+                        <div class="char-count">
+                            <span id="charCount">0</span>/600
+                        </div>
+                    </div>
+
+                    <div class="ticket-limit-info">
+                        <i class="fas fa-info-circle"></i>
+                        <span>You can create up to 3 tickets per day. Remaining today: <strong id="remainingTickets">3</strong></span>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" class="btn-cancel" onclick="hideCreateTicketModal()">Cancel</button>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Submit Ticket
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="unified-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo & Description -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                            <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon" style="width: 32px; height: 32px; border-radius: 50%;">
+                            <span>CHAND TRICKER</span>
+                        </a>
+                    </div>
+                    <p>Your trusted platform for premium digital solutions, tools, and services. Join thousands of users worldwide.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="tools.html"><i class="fas fa-chevron-right"></i> Tools</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="download-files.html"><i class="fas fa-chevron-right"></i> Download Files</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-section">
+                    <h4><i class="fas fa-file-alt"></i> Policies</h4>
+                    <ul>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="refund-policy.html"><i class="fas fa-chevron-right"></i> Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="footer-section">
+                    <h4><i class="fas fa-address-book"></i> Contact Us</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/message/63ORB7U3LWOWD1" class="social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VaZrEGYIN9ih4PxcFQ33" class="social-link" title="WhatsApp Channel"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/@chandtricker/" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://youtube.com/@chandtricker2.0" class="social-link" title="YouTube 2.0"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/CH4ND.TRICKER" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/chand.tricker/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/CHANDTRICKER" class="social-link" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://github.com/chandtricker" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <strong>2025 - <span id="copyright-year">2026</span> CHAND TRICKER. All rights reserved.</strong> | Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i> <strong>CHAND TRICKER & ATF TEAM</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/unified-logout.js"></script>
+      <script src="assets/js/unified-navigation.js"></script>
+      <script src="assets/js/scroll-to-top.js"></script>
+      <script src="chat-popup.js"></script>
+    <script src="assets/js/support-tickets.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script>
+        // Make functions globally available immediately
+        function showCreateTicketModal() {
+            const modal = document.getElementById('createTicketModal');
+            if (modal) {
+                modal.classList.add('active');
+                const subjectInput = document.getElementById('ticketSubject');
+                if (subjectInput) subjectInput.focus();
+            }
+        }
+        
+        function hideCreateTicketModal() {
+            const modal = document.getElementById('createTicketModal');
+            const form = document.getElementById('createTicketForm');
+            const charCount = document.getElementById('charCount');
+            if (modal) modal.classList.remove('active');
+            if (form) form.reset();
+            if (charCount) charCount.textContent = '0';
+        }
+        
+        function filterTickets(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.filter === filter) btn.classList.add('active');
+            });
+            renderTickets();
+        }
+        
+        function closeTicketDetail() {
+            document.getElementById('ticketsList').style.display = 'block';
+            document.getElementById('ticketDetail').style.display = 'none';
+            currentTicket = null;
+        }
+    </script>
+    <script>
+        // Check authentication and initialize UI
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                window.location.href = '/login?redirect=/support-tickets';
+            }
+            
+            // Call updateAuthUI from unified-navigation.js
+            if (typeof updateAuthUI === 'function') {
+                updateAuthUI(!!token);
+            }
+            
+            // Typing effect
+            const txtElement = document.querySelector('.typing-text');
+            if (txtElement) {
+                const texts = ['Get Help Fast', '24/7 Support', 'Quick Resolution'];
+                let count = 0;
+                let index = 0;
+                let currentText = '';
+                let letter = '';
+
+                (function type() {
+                    if (count === texts.length) {
+                        count = 0;
+                    }
+                    currentText = texts[count];
+                    letter = currentText.slice(0, ++index);
+
+                    txtElement.textContent = letter;
+
+                    if (letter.length === currentText.length) {
+                        count++;
+                        index = 0;
+                        setTimeout(type, 2000);
+                    } else {
+                        setTimeout(type, 150);
+                    }
+                })();
+            }
+        });
+    </script>
+</body>
+</html>

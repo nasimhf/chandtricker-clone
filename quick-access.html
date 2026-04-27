@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Access | Active Tools & Running Sessions - CHAND TRICKER</title>
+    <meta name="description" content="Access your active tools and running sessions on CHAND TRICKER. View countdown timers, refresh tool access, manage premium tool sessions, and track active tool usage. Quick access to all your premium tools in one place.">
+    <meta name="keywords" content="quick access, active tools, running tools, tool sessions, premium tools, tool access, tool countdown, active sessions, tool management, CHAND TRICKER tools">
+    <meta name="author" content="CHAND TRICKER">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="quick-access.html">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://chandtricker.com/assets/css/quick-access.css">
+    <link rel="stylesheet" href="assets/css/unified-header.css">
+    <script src="assets/js/unified-navigation.js" defer></script>
+    <link rel="stylesheet" href="assets/css/scroll-to-top.css">
+    <link rel="stylesheet" href="assets/css/unified-footer.css">
+    <script src="chat-popup.js"></script>
+
+</head>
+<body>
+    <!-- Unified Navigation Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                    <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon">
+                    <span>CHAND TRICKER</span>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <!-- Public Navigation Items -->
+                <a href="index.html" class="nav-link-public"><i class="fas fa-home"></i> Home</a>
+                <a href="tools.html" class="nav-link-public"><i class="fas fa-tools"></i> Tools</a>
+                <a href="services.html" class="nav-link-public"><i class="fas fa-gem"></i> Services</a>
+                <a href="about.html" class="nav-link-public"><i class="fas fa-info-circle"></i> About</a>
+                <a href="contact.html" class="nav-link-public"><i class="fas fa-envelope"></i> Contact</a>
+
+                <!-- Authentication Links -->
+                <a href="logout.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+
+                <!-- Premium/User Features (Hidden until logged in) -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="profile.html" class="auth-only-link profile-btn" style="display: none;"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="quick-access.html" class="auth-only-link quick-access-btn" style="display: none;"><i class="fas fa-bolt"></i> Quick Access</a>
+
+                <!-- Tools & Services -->
+              <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="file-services.html" class="auth-only-link" style="display: none;"><i class="fab fa-servicestack"></i> File Services</a>
+              <a href="download-files.html" class="auth-only-link" style="display: none;"><i class="fas fa-download"></i> Files Download</a>
+              <a href="download-apk.html" class="auth-only-link" style="display: none;"><i class="fas fa-mobile-alt"></i> APK Download</a>
+
+                <!-- Account Management -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="payment.html" class="auth-only-link payment-btn" style="display: none;"><i class="fas fa-wallet"></i> Payment</a>
+                <a href="withdrawal.html" class="auth-only-link withdrawal-btn" style="display: none;"><i class="fas fa-money-bill-wave"></i> Withdrawal</a>
+                <a href="referral.html" class="auth-only-link referral-btn" style="display: none;"><i class="fas fa-user-plus"></i> Referral</a>
+
+                <!-- Tools & Support -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="user-search.html" class="auth-only-link user-search-btn" style="display: none;"><i class="fas fa-search"></i> User Search</a>
+                <a href="support-tickets.html" class="auth-only-link support-btn" style="display: none;"><i class="fas fa-ticket-alt"></i> Support Tickets</a>
+                <a href="blog.html" class="auth-only-link blog-btn" style="display: none;"><i class="fas fa-blog"></i> Blog</a>
+              <a href="video.html" class="auth-only-link" style="display: none;"><i class="fab fa-youtube-square"></i> Tricks Video</a>
+
+                <!-- Logout (Last Item) -->
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="logout.html" class="logout-btn logout-link auth-only-link" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation -->
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="page-header">
+            <h1><i class="fas fa-bolt"></i> Quick Access</h1>
+            <p>Your active tools with real-time countdown</p>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="loading-state">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <p>Loading your active tools...</p>
+        </div>
+
+        <!-- Active Tools Grid -->
+        <div id="activeToolsGrid" class="active-tools-grid" style="display: none;">
+            <!-- Tools will be loaded here -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state" style="display: none;">
+            <i class="fas fa-tools"></i>
+            <h3>No Active Tools</h3>
+            <p>You don't have any active tools right now.<br>Visit the tools page to activate some premium tools.</p>
+            <a href="tools.html">
+                <i class="fas fa-arrow-right"></i>
+                Browse Tools
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let activeTools = [];
+        let updateInterval = null;
+        let currentUser = null;
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAuthentication();
+        });
+
+        // Check if user is authenticated
+        async function checkAuthentication() {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                window.location.href = '/login';
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/user', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    currentUser = data.user;
+                    loadActiveTools();
+                } else {
+                    localStorage.removeItem('token');
+                    window.location.href = '/login';
+                }
+            } catch (error) {
+                console.error('Auth error:', error);
+                window.location.href = '/login';
+            }
+        }
+
+        // Load active tools from server
+        async function loadActiveTools() {
+            try {
+                const token = localStorage.getItem('token');
+                const response = await fetch('/api/user/active-sessions', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    activeTools = data.activeSessions || [];
+                    displayActiveTools();
+                    startCountdownUpdates();
+                } else {
+                    showEmptyState();
+                }
+            } catch (error) {
+                console.error('Error loading active tools:', error);
+                showEmptyState();
+            } finally {
+                document.getElementById('loadingState').style.display = 'none';
+            }
+        }
+
+        // Display active tools
+        function displayActiveTools() {
+            const grid = document.getElementById('activeToolsGrid');
+            const emptyState = document.getElementById('emptyState');
+            const now = Date.now();
+
+            // Filter out expired tools
+            const validTools = activeTools.filter(tool => {
+                const timeLeft = tool.expiresAt - now;
+                return timeLeft > 0;
+            });
+
+            // Update activeTools array to only contain valid tools
+            activeTools = validTools;
+
+            if (validTools.length === 0) {
+                showEmptyState();
+                return;
+            }
+
+            emptyState.style.display = 'none';
+            grid.style.display = 'grid';
+
+            grid.innerHTML = validTools.map(tool => {
+                const timeLeft = tool.expiresAt - now;
+                const totalDuration = tool.duration || 30 * 60 * 1000; // Default 30 minutes
+                const progressPercentage = Math.max(0, (timeLeft / totalDuration) * 100);
+                const timeClass = getTimeClass(timeLeft);
+
+                return `
+                    <div class="tool-card" data-tool-id="${tool.toolId}">
+                        <div class="tool-header">
+                            <div class="tool-info">
+                                <div class="tool-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <div class="tool-name">${tool.toolName || 'Tool'}</div>
+                            </div>
+                            <div class="tool-status">
+                                <i class="fas fa-circle"></i>
+                                Active
+                            </div>
+                        </div>
+
+                        <div class="countdown-section">
+                            <div class="countdown-label">Time Remaining</div>
+                            <div class="countdown-display ${timeClass}" data-expires="${tool.expiresAt}">
+                                ${formatTime(timeLeft)}
+                            </div>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill ${timeClass}" style="width: ${progressPercentage}%"></div>
+                        </div>
+
+                        <div class="tool-actions">
+                            <a href="https://chandtricker.com/tool/${tool.toolFile}?key=${tool.accessKey}" target="_blank" class="tool-btn btn-access">
+                                <i class="fas fa-external-link-alt"></i>
+                                Open Tool
+                            </a>
+                            <button class="tool-btn btn-refresh" onclick="refreshTool('${tool.toolId}')">
+                                <i class="fas fa-sync-alt"></i>
+                                Refresh
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Show empty state
+        function showEmptyState() {
+            document.getElementById('activeToolsGrid').style.display = 'none';
+            document.getElementById('emptyState').style.display = 'block';
+        }
+
+        // Format time to MM:SS
+        function formatTime(milliseconds) {
+            const totalSeconds = Math.max(0, Math.floor(milliseconds / 1000));
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        // Get time-based CSS class
+        function getTimeClass(timeLeft) {
+            if (timeLeft < 60000) return 'danger'; // Less than 1 minute
+            if (timeLeft < 300000) return 'warning'; // Less than 5 minutes
+            return '';
+        }
+
+        // Start countdown updates
+        function startCountdownUpdates() {
+            // Clear existing interval
+            if (updateInterval) {
+                clearInterval(updateInterval);
+            }
+
+            updateInterval = setInterval(() => {
+                const now = Date.now();
+                let hasExpiredTools = false;
+
+                // Check if any tools have expired
+                activeTools.forEach(tool => {
+                    if (tool.expiresAt <= now) {
+                        hasExpiredTools = true;
+                    }
+                });
+
+                // If tools have expired, refresh the display
+                if (hasExpiredTools) {
+                    loadActiveTools();
+                    return;
+                }
+
+                // Update countdown displays for active tools
+                const countdownDisplays = document.querySelectorAll('.countdown-display[data-expires]');
+                countdownDisplays.forEach(display => {
+                    const expiresAt = parseInt(display.dataset.expires);
+                    const timeLeft = Math.max(0, expiresAt - now);
+
+                    // Update countdown display
+                    display.textContent = formatTime(timeLeft);
+
+                    // Update classes based on time remaining
+                    const timeClass = getTimeClass(timeLeft);
+                    display.className = `countdown-display ${timeClass}`;
+
+                    // Update progress bar
+                    const toolCard = display.closest('.tool-card');
+                    const progressFill = toolCard.querySelector('.progress-fill');
+                    const toolData = activeTools.find(t => t.toolId === toolCard.dataset.toolId);
+
+                    if (toolData) {
+                        const totalDuration = toolData.duration || 30 * 60 * 1000;
+                        const progressPercentage = Math.max(0, (timeLeft / totalDuration) * 100);
+                        progressFill.style.width = `${progressPercentage}%`;
+                        progressFill.className = `progress-fill ${timeClass}`;
+                    }
+                });
+            }, 1000);
+        }
+
+        // Refresh individual tool
+        function refreshTool(toolId) {
+            // Simply reload all active tools
+            loadActiveTools();
+        }
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function() {
+            if (updateInterval) {
+                clearInterval(updateInterval);
+            }
+        });
+
+        // Auto-refresh every 30 seconds to sync with server
+        setInterval(() => {
+            if (document.visibilityState === 'visible') {
+                loadActiveTools();
+            }
+        }, 30000);
+
+        // Refresh when page becomes visible
+        document.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'visible') {
+                loadActiveTools();
+            }
+        });
+
+        function setupEventListeners() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleMobileMenu();
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.nav-container') && !e.target.closest('.navbar')) {
+                        if (hamburger.classList.contains('active')) {
+                            hamburger.classList.remove('active');
+                            navLinks.classList.remove('active');
+                            document.body.classList.remove('nav-open');
+                        }
+                    }
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        setTimeout(() => {
+                            hamburger.classList.remove('active');
+                            navLinks.classList.remove('active');
+                            document.body.classList.remove('nav-open');
+                        }, 100);
+                    });
+                });
+            }
+        }
+
+        function toggleMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburger && navLinks) {
+                const isActive = hamburger.classList.contains('active');
+
+                if (isActive) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.classList.remove('nav-open');
+                } else {
+                    hamburger.classList.add('active');
+                    navLinks.classList.add('active');
+                    document.body.classList.add('nav-open');
+                }
+            }
+        }
+
+        // Initialize event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            setupEventListeners();
+        });
+    </script>
+    <footer class="unified-footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo & Description -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                            <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon" style="width: 32px; height: 32px; border-radius: 50%;">
+                            <span>CHAND TRICKER</span>
+                        </a>
+                    </div>
+                    <p>Your trusted platform for premium digital solutions, tools, and services. Join thousands of users worldwide.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="tools.html"><i class="fas fa-chevron-right"></i> Tools</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="download-files.html"><i class="fas fa-chevron-right"></i> Download Files</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-section">
+                    <h4><i class="fas fa-file-alt"></i> Policies</h4>
+                    <ul>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="refund-policy.html"><i class="fas fa-chevron-right"></i> Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="footer-section">
+                    <h4><i class="fas fa-address-book"></i> Contact Us</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/message/63ORB7U3LWOWD1" class="social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VaZrEGYIN9ih4PxcFQ33" class="social-link" title="WhatsApp Channel"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/@chandtricker/" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://youtube.com/@chandtricker2.0" class="social-link" title="YouTube 2.0"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/CH4ND.TRICKER" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/chand.tricker/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/CHANDTRICKER" class="social-link" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://github.com/chandtricker" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <strong>2025 - <span id="copyright-year">2026</span> CHAND TRICKER. All rights reserved.</strong> | Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i> <strong>CHAND TRICKER & ATF TEAM</strong></p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/scroll-to-top.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Search | Find Users, View Profiles & Stats - CHAND TRICKER</title>
+    <meta name="description" content="Search and find users on CHAND TRICKER platform. Discover other users, view profiles, check user stats, levels, followers, following & connect with the CHAND TRICKER community. Find members, view public profiles & social network.">
+    <meta name="keywords" content="user search, find users, search users, user profile, member search, CHAND TRICKER users, view profile, user stats, user level, followers, following, member directory, user directory, find members">
+    <meta name="author" content="CHAND TRICKER">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="user-search.html">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/user-search.css">
+    <link rel="stylesheet" href="assets/css/unified-header.css">
+    <link rel="stylesheet" href="assets/css/unified-footer.css">
+    <link rel="stylesheet" href="assets/css/scroll-to-top.css">
+</head>
+<body>
+    <!-- Unified Navigation Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                    <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon">
+                    <span>CHAND TRICKER</span>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link-public"><i class="fas fa-home"></i> Home</a>
+                <a href="tools.html" class="nav-link-public"><i class="fas fa-tools"></i> Tools</a>
+                <a href="services.html" class="nav-link-public"><i class="fas fa-gem"></i> Services</a>
+                <a href="about.html" class="nav-link-public"><i class="fas fa-info-circle"></i> About</a>
+                <a href="contact.html" class="nav-link-public"><i class="fas fa-envelope"></i> Contact</a>
+
+                <a href="logout.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="profile.html" class="auth-only-link profile-btn" style="display: none;"><i class="fas fa-user-circle"></i> Profile</a>
+                <a href="quick-access.html" class="auth-only-link quick-access-btn" style="display: none;"><i class="fas fa-bolt"></i> Quick Access</a>
+
+              <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="file-services.html" class="auth-only-link" style="display: none;"><i class="fab fa-servicestack"></i> File Services</a>
+              <a href="download-files.html" class="auth-only-link" style="display: none;"><i class="fas fa-download"></i> Files Download</a>
+              <a href="download-apk.html" class="auth-only-link" style="display: none;"><i class="fas fa-mobile-alt"></i> APK Download</a>
+
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="payment.html" class="auth-only-link payment-btn" style="display: none;"><i class="fas fa-wallet"></i> Payment</a>
+                <a href="withdrawal.html" class="auth-only-link withdrawal-btn" style="display: none;"><i class="fas fa-money-bill-wave"></i> Withdrawal</a>
+                <a href="referral.html" class="auth-only-link referral-btn" style="display: none;"><i class="fas fa-user-plus"></i> Referral</a>
+
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="user-search.html" class="auth-only-link user-search-btn" style="display: none;"><i class="fas fa-search"></i> User Search</a>
+                <a href="support-tickets.html" class="auth-only-link support-btn" style="display: none;"><i class="fas fa-ticket-alt"></i> Support Tickets</a>
+                <a href="blog.html" class="auth-only-link blog-btn" style="display: none;"><i class="fas fa-blog"></i> Blog</a>
+              <a href="video.html" class="auth-only-link" style="display: none;"><i class="fab fa-youtube-square"></i> Tricks Video</a>
+
+                <div class="nav-divider auth-only-link" style="display: none;"></div>
+
+                <a href="logout.html" class="logout-btn logout-link auth-only-link" style="display: none;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div id="particles-js"></div>
+
+    <div class="search-container">
+        <div class="search-box">
+            <div class="search-header">
+                <div class="search-icon">
+                </div>
+                <h1 class="search-title">Find Users</h1>
+                <p class="search-subtitle">Search for users and view their public profiles</p>
+            </div>
+            
+            <div class="search-wrapper">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search by username..." />
+            </div>
+            <div style="text-align: center;">
+                <button class="search-btn" onclick="searchUsers()">Search Users</button>
+            </div>
+            
+            <div class="search-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalUsers">0</div>
+                    <div class="stat-label">Total Users</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="users-header" id="usersHeader" style="display: none;">
+            <h2><i class="fas fa-user-plus"></i> Search Results</h2>
+            <span class="results-count" id="resultsCount"></span>
+        </div>
+        
+        <div class="users-list" id="usersList"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 40, density: { enable: true, value_area: 800 } },
+                color: { value: '#555' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.2 },
+                size: { value: 2, random: true },
+                line_linked: { enable: true, distance: 150, color: '#444', opacity: 0.15, width: 1 },
+                move: { enable: true, speed: 2, direction: 'none', out_mode: 'out' }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+                modes: { repulse: { distance: 80, duration: 0.4 }, push: { particles_nb: 2 } }
+            },
+            retina_detect: true
+        });
+
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/public-stats');
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.success && data.stats) {
+                        const num = data.stats.totalUsers || 0;
+                        if (num >= 1e9) document.getElementById('totalUsers').textContent = (num / 1e9).toFixed(1).replace(/\.0$/, '') + 'B';
+                        else if (num >= 1e6) document.getElementById('totalUsers').textContent = (num / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
+                        else if (num >= 1e3) document.getElementById('totalUsers').textContent = (num / 1e3).toFixed(1).replace(/\.0$/, '') + 'K';
+                        else document.getElementById('totalUsers').textContent = num.toString();
+                        return;
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading stats:', error);
+            }
+            document.getElementById('totalUsers').textContent = '0';
+        }
+        loadStats();
+
+        async function searchUsers() {
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            const usersList = document.getElementById('usersList');
+            const usersHeader = document.getElementById('usersHeader');
+            const resultsCount = document.getElementById('resultsCount');
+            
+            if (!searchTerm) {
+                usersList.innerHTML = `
+                    <div class="no-results">
+                        <div class="no-results-icon"><i class="fas fa-search"></i></div>
+                        <h3>Enter a username to search</h3>
+                        <p>Type a username in the search box above to find users</p>
+                    </div>
+                `;
+                usersHeader.style.display = 'none';
+                return;
+            }
+            
+            try {
+                usersList.innerHTML = `
+                    <div class="loading-spinner">
+                        <div class="spinner"></div>
+                        <p class="loading-text">Searching for "${searchTerm}"...</p>
+                    </div>
+                `;
+                
+                const response = await fetch('/api/search-users?q=' + encodeURIComponent(searchTerm));
+                const data = await response.json();
+                
+                if (response.ok && data.users && data.users.length > 0) {
+                    usersHeader.style.display = 'flex';
+                    resultsCount.textContent = `${data.users.length} user${data.users.length !== 1 ? 's' : ''} found`;
+                    
+                    usersList.innerHTML = data.users.map(user => `
+                        <div class="user-item">
+                            <div class="user-avatar">
+                                ${user.avatar ? `<img src="https://chandtricker.com/${user.avatar}" alt="Avatar">` : '<i class="fas fa-user"></i>'}
+                            </div>
+                            <div class="user-info">
+                                <div class="user-username">
+                                    ${user.username}
+                                    ${user.verified ? '<i class="fas fa-check-circle verified-badge"></i>' : ''}
+                                </div>
+                                <div class="user-meta">
+                                    <span class="user-level"><i class="fas fa-crown"></i> Level ${user.level || 1}</span>
+                                    ${user.joined ? `<span class="user-joined"><i class="fas fa-calendar-alt"></i> Joined ${user.joined}</span>` : ''}
+                                </div>
+                            </div>
+                            <a href="profile/${user.username}.html" class="view-profile-btn">
+                                <i class="fas fa-eye"></i> View Profile
+                            </a>
+                        </div>
+                    `).join('');
+                } else {
+                    usersHeader.style.display = 'none';
+                    usersList.innerHTML = `
+                        <div class="no-results">
+                            <div class="no-results-icon"><i class="fas fa-user-slash"></i></div>
+                            <h3>No users found</h3>
+                            <p>No users matching "${searchTerm}" were found. Try a different username.</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Search error:', error);
+                usersHeader.style.display = 'none';
+                usersList.innerHTML = `
+                    <div class="no-results">
+                        <div class="no-results-icon" style="color: #ef4444;"><i class="fas fa-exclamation-triangle"></i></div>
+                        <h3>Error searching users</h3>
+                        <p>Something went wrong. Please try again later.</p>
+                    </div>
+                `;
+            }
+        }
+
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchUsers();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const usersList = document.getElementById('usersList');
+            usersList.innerHTML = `
+                <div class="no-results">
+                    <div class="no-results-icon"><i class="fas fa-user-friends"></i></div>
+                    <h3>Search for users</h3>
+                    <p>Enter a username above to find and connect with other users</p>
+                </div>
+            `;
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateNavigationState();
+        });
+
+        function updateNavigationState() {
+            const token = localStorage.getItem('token');
+            const loginBtn = document.querySelector('.login-btn');
+            const profileBtn = document.querySelector('.profile-btn');
+            const logoutBtn = document.querySelector('.logout-btn');
+
+            if (token) {
+                if (loginBtn) loginBtn.style.display = 'none';
+                if (profileBtn) profileBtn.style.display = 'flex';
+                if (logoutBtn) logoutBtn.style.display = 'flex';
+            } else {
+                if (loginBtn) loginBtn.style.display = 'flex';
+                if (profileBtn) profileBtn.style.display = 'none';
+                if (logoutBtn) logoutBtn.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoutBtn = document.querySelector('.logout-link');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('userType');
+                    window.location.href = '/login';
+                });
+            }
+        });
+
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'token' || e.key === null) {
+                updateNavigationState();
+            }
+        });
+    </script>
+    <script src="assets/js/unified-logout.js"></script>
+    <script src="assets/js/unified-navigation.js"></script>
+    <script src="assets/js/scroll-to-top.js"></script>
+    <script src="chat-popup.js"></script>
+    <footer class="unified-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon"></a>
+                        <span>CHAND TRICKER</span>
+                    </div>
+                    <p>Your trusted platform for premium digital solutions.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 - <span id="copyright-year">2026</span> CHAND TRICKER. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/footer.js"></script>
+</body>
+</html>

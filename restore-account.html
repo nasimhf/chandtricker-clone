@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Restore Account | Recover Deleted Account - CHAND TRICKER</title>
+    <meta name="description" content="Restore your deleted CHAND TRICKER account. Recover your coins, level, and data within 30 days of account deletion.">
+    <meta name="keywords" content="restore account, recover account, deleted account, CHAND TRICKER account recovery">
+    <meta name="author" content="CHAND TRICKER">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="restore-account.html">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/unified-header.css">
+    <link rel="stylesheet" href="assets/css/unified-footer.css">
+    <link rel="stylesheet" href="assets/css/scroll-to-top.css">
+    <link rel="stylesheet" href="assets/css/restore-account.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                    <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon">
+                    <span>CHAND TRICKER</span>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link-public"><i class="fas fa-home"></i> Home</a>
+                <a href="tools.html" class="nav-link-public"><i class="fas fa-tools"></i> Tools</a>
+                <a href="services.html" class="nav-link-public"><i class="fas fa-gem"></i> Services</a>
+                <a href="about.html" class="nav-link-public"><i class="fas fa-info-circle"></i> About</a>
+                <a href="contact.html" class="nav-link-public"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="logout.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <a href="signup.html" class="signup-btn"><i class="fas fa-user-plus"></i> Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="restore-card">
+                <!-- Restore Form -->
+                <div id="restoreFormContainer">
+                    <div class="restore-header">
+                        <div class="icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <h1>Restore Account</h1>
+                        <p>Recover your deleted account within 30 days</p>
+                    </div>
+                    <div class="info-box">
+                        <h3><i class="fas fa-info-circle"></i> How it works</h3>
+                        <ul>
+                            <li>Enter the email address of your deleted account</li>
+                            <li>We'll send you a verification email</li>
+                            <li>Click the link and submit your restore request</li>
+                            <li>Our admin team will review and restore your account</li>
+                        </ul>
+                    </div>
+                    <form id="restoreForm">
+                        <div class="form-group">
+                            <label class="form-label" for="restoreEmail">
+                                <i class="fas fa-envelope"></i> Email Address
+                            </label>
+                            <input type="email" id="restoreEmail" class="form-input" placeholder="Enter your deleted account email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="restoreBtn">
+                            <i class="fas fa-search"></i> Check Account
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Pending Verification -->
+                <div id="restoreCompleteContainer" class="hidden">
+                    <div class="success-box">
+                        <div class="icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h1>Check Your Email!</h1>
+                        <p>A verification email has been sent to your email address.</p>
+                    </div>
+                    <div class="account-details">
+                        <div class="detail-row">
+                            <span class="detail-label"><i class="fas fa-envelope"></i> Email</span>
+                            <span class="detail-value highlight" id="pendingEmail">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label"><i class="fas fa-clock"></i> Status</span>
+                            <span class="detail-value">Pending Verification</span>
+                        </div>
+                    </div>
+                    <button type="button" class="resend-btn" id="resendEmailBtn">
+                        <i class="fas fa-redo"></i> Resend Email
+                    </button>
+                    <p id="resendStatus" style="color: #888; font-size: 0.85rem; margin-top: 10px; text-align: center;"></p>
+                    <p style="color: #888; font-size: 0.9rem; margin-top: 20px; text-align: center;">
+                        <i class="fas fa-info-circle"></i> Didn't receive the email? Check your spam folder or click resend.
+                    </p>
+                </div>
+
+                <!-- No Account Found -->
+                <div id="noAccountContainer" class="hidden">
+                    <div class="restore-header">
+                        <div class="icon" style="background: linear-gradient(135deg, #ff6b6b, #c62828);">
+                            <i class="fas fa-user-times"></i>
+                        </div>
+                        <h1>Account Not Found</h1>
+                        <p>No deleted account found with this email address.</p>
+                    </div>
+                    <div class="error-box">
+                        <h3><i class="fas fa-exclamation-triangle"></i> No Account Found</h3>
+                        <p>This email address is not associated with any deleted account in our system.</p>
+                    </div>
+                    <button type="button" class="btn btn-secondary" id="backToRestoreBtn" style="margin-top: 15px;">
+                        <i class="fas fa-arrow-left"></i> Back to Restore
+                    </button>
+                </div>
+
+                <div class="or-divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="back-links">
+                    <a href="logout.html" class="back-link">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                    <a href="signup.html" class="back-link">
+                        <i class="fas fa-user-plus"></i> Create Account
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="unified-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                            <img src="https://cdn.jsdelivr.net/gh/chanddark/Image1/images/icon.png" alt="CHAND TRICKER" class="vip-icon" style="width: 32px; height: 32px; border-radius: 50%;">
+                            <span>CHAND TRICKER</span>
+                        </a>
+                    </div>
+                    <p>Your trusted platform for premium digital solutions, tools, and services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="tools.html"><i class="fas fa-chevron-right"></i> Tools</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-file-alt"></i> Policies</h4>
+                    <ul>
+                        <li><a href="faq.html"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="privacy-policy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="refund-policy.html"><i class="fas fa-chevron-right"></i> Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-address-book"></i> Contact Us</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/message/63ORB7U3LWOWD1" class="social-link" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/@chandtricker/" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/CH4ND.TRICKER" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/chand.tricker/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/CHANDTRICKER" class="social-link" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://github.com/chandtricker" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <strong>2025 - <span id="copyright-year">2026</span> CHAND TRICKER. All rights reserved.</strong> | Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i> <strong>CHAND TRICKER & ATF TEAM</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="assets/js/scroll-to-top.js"></script>
+    <script src="assets/js/unified-navigation.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script>
+        const swalTheme = {
+            confirmButtonColor: '#FFD700',
+            cancelButtonColor: '#6c757d',
+            background: '#1a1a1a',
+            color: '#ffffff'
+        };
+
+        function showAlert(type, title, text) {
+            Swal.fire({
+                icon: type,
+                title: title,
+                text: text,
+                ...swalTheme
+            });
+        }
+
+        const restoreForm = document.getElementById('restoreForm');
+        const restoreBtn = document.getElementById('restoreBtn');
+        const restoreFormContainer = document.getElementById('restoreFormContainer');
+        const restoreCompleteContainer = document.getElementById('restoreCompleteContainer');
+        const noAccountContainer = document.getElementById('noAccountContainer');
+        const resendEmailBtn = document.getElementById('resendEmailBtn');
+        const resendStatus = document.getElementById('resendStatus');
+        const pendingEmailEl = document.getElementById('pendingEmail');
+        const backToRestoreBtn = document.getElementById('backToRestoreBtn');
+
+        const RESEND_COOLDOWN_MS = 60000;
+        const MAX_RESENDS_PER_DAY = 3;
+
+        function getRateLimitData(email) {
+            const key = `restore_resend_${email}`;
+            const data = localStorage.getItem(key);
+            if (!data) return { count: 0, lastSent: null, date: new Date().toDateString() };
+            return JSON.parse(data);
+        }
+
+        function saveRateLimitData(email, data) {
+            const key = `restore_resend_${email}`;
+            localStorage.setItem(key, JSON.stringify(data));
+        }
+
+        function canResend(email) {
+            const data = getRateLimitData(email);
+            const today = new Date().toDateString();
+            
+            if (data.date !== today) {
+                saveRateLimitData(email, { count: 0, lastSent: null, date: today });
+                return { allowed: true, remaining: MAX_RESENDS_PER_DAY };
+            }
+            
+            if (data.count >= MAX_RESENDS_PER_DAY) {
+                return { allowed: false, remaining: 0, message: 'Daily limit reached. Try again tomorrow.' };
+            }
+            
+            if (data.lastSent) {
+                const elapsed = Date.now() - data.lastSent;
+                if (elapsed < RESEND_COOLDOWN_MS) {
+                    const remaining = Math.ceil((RESEND_COOLDOWN_MS - elapsed) / 1000);
+                    return { allowed: false, remaining: MAX_RESENDS_PER_DAY - data.count, cooldown: remaining };
+                }
+            }
+            
+            return { allowed: true, remaining: MAX_RESENDS_PER_DAY - data.count };
+        }
+
+        function updateResendButton(email) {
+            const status = canResend(email);
+            if (!status.allowed) {
+                resendEmailBtn.disabled = true;
+                if (status.cooldown) {
+                    resendEmailBtn.innerHTML = `<i class="fas fa-clock"></i> Wait ${status.cooldown}s`;
+                    resendStatus.textContent = `Please wait ${status.cooldown} seconds before resending.`;
+                    let remaining = status.cooldown;
+                    const interval = setInterval(() => {
+                        remaining--;
+                        if (remaining <= 0) {
+                            clearInterval(interval);
+                            updateResendButton(email);
+                        } else {
+                            resendEmailBtn.innerHTML = `<i class="fas fa-clock"></i> Wait ${remaining}s`;
+                            resendStatus.textContent = `Please wait ${remaining} seconds before resending.`;
+                        }
+                    }, 1000);
+                } else {
+                    resendEmailBtn.innerHTML = '<i class="fas fa-ban"></i> Limit Reached';
+                    resendStatus.textContent = status.message;
+                }
+            } else {
+                resendEmailBtn.disabled = false;
+                resendEmailBtn.innerHTML = '<i class="fas fa-redo"></i> Resend Email';
+                resendStatus.textContent = `You can resend ${status.remaining} more time${status.remaining !== 1 ? 's' : ''} today.`;
+            }
+        }
+
+        resendEmailBtn.addEventListener('click', async () => {
+            const email = localStorage.getItem('restoreEmail');
+            if (!email) {
+                showAlert('error', 'Error', 'Email not found. Please submit the form again.');
+                return;
+            }
+
+            const status = canResend(email);
+            if (!status.allowed) {
+                showAlert('warning', 'Limit Reached', status.message || 'Please wait before resending.');
+                return;
+            }
+
+            resendEmailBtn.disabled = true;
+            resendEmailBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+            try {
+                const response = await fetch('/api/restore-appeal/resend', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    const rateData = getRateLimitData(email);
+                    rateData.count++;
+                    rateData.lastSent = Date.now();
+                    rateData.date = new Date().toDateString();
+                    saveRateLimitData(email, rateData);
+                    
+                    showAlert('success', 'Email Sent', 'Verification email has been resent!');
+                    updateResendButton(email);
+                } else {
+                    showAlert('error', 'Error', data.error || 'Failed to resend email.');
+                    resendEmailBtn.disabled = false;
+                    resendEmailBtn.innerHTML = '<i class="fas fa-redo"></i> Resend Email';
+                }
+            } catch (error) {
+                console.error('Resend error:', error);
+                showAlert('error', 'Network Error', 'Network error. Please try again.');
+                resendEmailBtn.disabled = false;
+                resendEmailBtn.innerHTML = '<i class="fas fa-redo"></i> Resend Email';
+            }
+        });
+
+        backToRestoreBtn.addEventListener('click', () => {
+            noAccountContainer.classList.add('hidden');
+            restoreFormContainer.classList.remove('hidden');
+            document.getElementById('restoreEmail').value = '';
+            restoreBtn.disabled = false;
+            restoreBtn.innerHTML = '<i class="fas fa-search"></i> Check Account';
+        });
+
+        restoreForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('restoreEmail').value.trim();
+            
+            if (!email) {
+                showAlert('info', 'Email Required', 'Please enter your email address');
+                return;
+            }
+
+            restoreBtn.disabled = true;
+            restoreBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Checking...';
+
+            try {
+                // Check if user exists
+                const checkUserResponse = await fetch('/api/restore-appeal/check-user', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email })
+                });
+                
+                const checkUserData = await checkUserResponse.json();
+                
+                if (!checkUserData.exists) {
+                    restoreFormContainer.classList.add('hidden');
+                    noAccountContainer.classList.remove('hidden');
+                    restoreBtn.disabled = false;
+                    restoreBtn.innerHTML = '<i class="fas fa-search"></i> Check Account';
+                    return;
+                }
+
+                // Check appeal status
+                const statusResponse = await fetch('/api/restore-appeal/status/' + encodeURIComponent(email));
+                const statusData = await statusResponse.json();
+
+                if (statusData.hasAppeal) {
+                    if (statusData.status === 'pending_verification') {
+                        pendingEmailEl.textContent = email;
+                        restoreFormContainer.classList.add('hidden');
+                        restoreCompleteContainer.classList.remove('hidden');
+                        updateResendButton(email);
+                        localStorage.setItem('restoreEmail', email);
+                        restoreBtn.disabled = false;
+                        restoreBtn.innerHTML = '<i class="fas fa-search"></i> Check Account';
+                        return;
+                    } else if (statusData.status === 'pending_approval') {
+                        showAlert('info', 'Request Pending', 'Your restore request is already pending admin approval.');
+                        restoreBtn.disabled = false;
+                        restoreBtn.innerHTML = '<i class="fas fa-search"></i> Check Account';
+                    } else if (statusData.status === 'approved') {
+                        showAlert('success', 'Already Restored', 'Your account has already been restored! Please login.');
+                        restoreBtn.disabled = false;
+                        restoreBtn.innerHTML = '<i class="fas fa-search"></i> Check Account';
+                    }
+                    return;
+                }
+
+                // Submit restore request
+                const response = await fetch('/api/restore-appeal', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    pendingEmailEl.textContent = email;
+                    restoreFormContainer.classList.add('hidden');
+                    restoreCompleteContainer.classList.remove('hidden');
+                    localStorage.setItem('restoreAppealId', data.appealId);
+                    localStorage.setItem('restoreEmail', email);
+                    updateResendButton(email);
+                } else {
+                    if (data.error && data.error.includes('expired')) {
+                        noAccountContainer.classList.remove('hidden');
+                        restoreFormContainer.classList.add('hidden');
+                    } else {
+                        showAlert('error', 'Error', data.error || 'Failed to submit restore request');
+                    }
+                }
+                
+                restoreBtn.disabled = false;
+                restoreBtn.innerHTML = '<i class="fas fa-search"></i> Check Account';
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showAlert('error', 'Network Error', 'Network error. Please try again.');
+                restoreBtn.disabled = false;
+                restoreBtn.innerHTML = '<i class="fas fa-search"></i> Check Account';
+            }
+        });
+    </script>
+</body>
+</html>

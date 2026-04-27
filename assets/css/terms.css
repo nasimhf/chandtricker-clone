@@ -1,0 +1,393 @@
+:root {
+    --gold: #FFD700;
+    --silver: #C0C0C0;
+    --primary-black: #1a1a1a;
+    --secondary-black: #2d2d2d;
+    --gradient-gold: linear-gradient(135deg, #FFD700, #FFA500);
+    --shadow-gold: 0 10px 30px rgba(255, 215, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.terms-hero {
+    background: linear-gradient(135deg, 
+        rgba(5, 5, 5, 0.98) 0%, 
+        rgba(20, 20, 20, 0.95) 50%,
+        rgba(8, 8, 8, 0.98) 100%);
+    padding: 140px 0 80px;
+    text-align: center;
+    margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.terms-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(255, 215, 0, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(0, 255, 136, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(0, 204, 255, 0.05) 0%, transparent 35%);
+    z-index: 0;
+}
+
+.terms-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.vip-badge-terms {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid var(--gold);
+    padding: 10px 25px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: var(--gold);
+    animation: glow 2s infinite alternate;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+    to { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6), 0 0 60px rgba(255, 215, 0, 0.3); }
+}
+
+.terms-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.terms-subtitle {
+    font-size: 1.3rem;
+    color: var(--silver);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.terms-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.terms-content {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(42, 42, 42, 0.9));
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 20px;
+    padding: 50px;
+    line-height: 1.8;
+    position: relative;
+    overflow: hidden;
+}
+
+.terms-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 85% 15%, rgba(255, 215, 0, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 15% 85%, rgba(0, 204, 255, 0.04) 0%, transparent 45%);
+    z-index: -1;
+}
+
+.terms-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--gold);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.terms-content h2::before {
+    content: '\f570';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    -webkit-text-fill-color: var(--gold);
+    font-size: 1.2rem;
+}
+
+.terms-content h2:first-child {
+    margin-top: 0;
+}
+
+.terms-content h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #FFD700;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms-content p {
+    color: var(--silver);
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+.terms-content ul {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.terms-content ul li {
+    margin-bottom: 12px;
+    color: var(--silver);
+    position: relative;
+    padding-left: 10px;
+}
+
+.terms-content ul li::marker {
+    color: var(--gold);
+}
+
+.terms-content a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.terms-content a:hover {
+    border-bottom-color: var(--gold);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.terms-content strong {
+    color: var(--gold);
+}
+
+/* Important Box */
+.important-box {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(255, 107, 107, 0.05));
+    border: 2px solid rgba(255, 107, 107, 0.4);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.important-box h3 {
+    color: #ff6b6b;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.important-box h3 i {
+    font-size: 1.4rem;
+}
+
+.important-box p {
+    margin-bottom: 0;
+}
+
+/* Notice Box */
+.notice-box {
+    background: linear-gradient(135deg, rgba(0, 204, 255, 0.1), rgba(0, 204, 255, 0.05));
+    border: 2px solid rgba(0, 204, 255, 0.4);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.notice-box h3 {
+    color: #00ccff;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.notice-box h3 i {
+    font-size: 1.4rem;
+}
+
+.notice-box p {
+    margin-bottom: 0;
+}
+
+/* Contact Box */
+.contact-box {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 165, 0, 0.08));
+    border: 2px solid var(--gold);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.08), transparent);
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.contact-box h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-box p {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-box a {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.last-updated {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid rgba(255, 215, 0, 0.2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.last-updated p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.last-updated strong {
+    color: var(--gold);
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .terms-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .terms-title {
+        font-size: 2.2rem;
+    }
+    
+    .terms-subtitle {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+    
+    .terms-container {
+        padding: 40px 15px;
+    }
+    
+    .terms-content {
+        padding: 30px 20px;
+    }
+    
+    .terms-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .last-updated {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms-title {
+        font-size: 1.8rem;
+    }
+    
+    .terms-hero {
+        padding: 100px 0 50px;
+    }
+    
+    .notice-box,
+    .important-box {
+        padding: 20px;
+    }
+    
+    .contact-box {
+        padding: 30px 20px;
+    }
+}
